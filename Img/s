@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		section{
+			width: 100%;
+			height: 100vh;
+		}
+		section:nth-child(1){
+			background: url('background.jpg') no-repeat;
+			background-size: cover;
+			background-position: 50% 30%;
+		}
+		section.about{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			line-height: 4rem;
+		}
+		section.about img{
+			width: 20rem;
+			height: 20rem;
+			border-radius: 50%;
+			margin-bottom: 2rem;
+		}
+		section.about h1{
+			font-size: 2.5rem;
+		}
+		section.about p{
+			font-size: 1.25rem;
+		}
+		section.projects{
+			background-color: rgba(233,233,233,0.6);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		section.projects .project-list{
+			height: 85vh;
+			max-width: 700px;
+			border: 1px solid red;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		section.projects .project-list li{
+			width: 13rem;
+			height: 12.5rem;
+			background-color: white;
+			border: 1px solid #ccc;
+		}section.projects .project-list li div{
+			padding: 7px 5px 10px 5px;
+		}
+		section.projects .project-list img{
+			width: 100%;
+		}
+		section.projects .project-list li a{
+			float: right;
+			color: black;
+		}
+		section.technical{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+		section.technical ol{
+			padding: 10rem 0;
+		}
+		section.technical ol li a{
+			display: inline-block;
+			padding: 1em 2em;
+			color: white;
+			background: #ccc;
+			border-radius: 2px;
+			vertical-align: middle;
+			transform: perspective(1px) translateZ(0);
+			box-shadow: 0 0 1px transparent;
+			position: relative;
+			transition-property: color;
+			transition-duration: .3s;
+		}
+		section.technical ol li a::before{
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 0;right: 0;left: 0;bottom: 0;
+			background-color: #2098d1;
+			transform: scaleX(0);
+			transform-origin: 0 50%;
+			transition-duration: .3s;
+			transition-timing-function: ease-out;
+		}
+		section.technical ol li a:hover::before,
+		section.technical ol li a:focus::before,
+		section.technical ol li a:active::before{
+			transform: scaleX(1)
+		}
+		[class^="hvr-"]{
+		    margin: .4em;
+    		padding: 1em;
+   			cursor: pointer;
+    		background: #e1e1e1;
+    		text-decoration: none;
+    		color: #666;
+    		-webkit-tap-highlight-color: rgba(0,0,0,0);
+    		-webkit-font-smoothing: antialiased;
+		}
+		section.technical ol li p{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<section></section>
+	<section class='about'>
+		<img src="background.jpg" alt="">
+		<h1>李子豪</h1>
+		<p>一份努力，一分收获，一个像素，一个人生</p>
+		<p><a href="https://aleenl.github.io/">个人博客</a></p>
+	</section>
+	<section class="projects">
+		<h2>我的作品</h2>
+		<ul class="project-list">
+			<li>
+				<img src="background.jpg" alt="">
+				<div>
+					<a href="">预览</a>
+					<p>React项目</p>
+				</div>				
+			</li>
+			<li>
+				<img src="background.jpg" alt="">
+				<div>
+					<a href="">预览</a>
+					<p>手机FM</p>
+				</div>				
+			</li>
+			<li>
+				<img src="background.jpg" alt="">
+				<div>
+					<a href="">预览</a>
+					<p>Vue简历制作器</p>
+				</div>				
+			</li>
+			<li>
+				<img src="background.jpg" alt="">
+				<div>
+					<a href="">预览</a>
+					<p>CSS小动画</p>
+				</div>				
+			</li>
+			<li>
+				<img src="background.jpg" alt="">
+				<div>
+					<a href="">预览</a>
+					<p>网页音乐播放器</p>
+				</div>				
+			</li>
+			<li>
+				<img src="background.jpg" alt="">
+				<div>
+					<a href="">预览</a>
+					<p>网页仿站</p>
+				</div>				
+			</li>
+		</ul>	
+	</section>
+	<section class="technical">
+		<h2>技能介绍</h2>
+		<ol>
+			<li>
+			<a href="">静态页面</a>
+			<p>100%还原设计稿，像素级页面制作能力</p>
+			</li>
+			<li>
+			<a href="">动态页面</a>
+			<p>熟悉HTTP、AJAX、JSONP等技术，了解前后端分离开发模式</p>
+			</li>
+			<li>
+			<a href="">移动页面</a>
+			<p>熟悉CSS 3、响应式页面等</p>
+			</li>
+			<li>
+			<a href="">前端框架</a>
+			<p>了解Vue.js、React 基本原理，能使用前端框架开发富交互式应用</p>
+			</li>
+		</ol>
+	</section>
+	<section>
+		<h2>联系方式</h2>
+		<p>Email:<a href="mailto:aleenli1992@gmail.com">aleenli1992@gmail.com</a></p>
+		<p>Phone:<span>18580360217</span></p>
+		<p><a href="">下载简历</a><p>
+	</section>
+</body>
+</html>
