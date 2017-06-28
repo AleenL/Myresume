@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>H5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+        
+        body {
+            font: 12px 'Microsoft Yahei', tahoma, arial, 'Hiragino Sans GB', sans-serif;
+            background: #fff;
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        header {
+            width: 100vw;
+            position: relative
+        }
+        
+        header h3,
+        header a {
+            position: absolute;
+            width: 70vw;
+            color: #fff;
+            left: 50%;
+            top: 2.05rem;
+            transform: translateX(-50%);
+        }
+        
+        header a {
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        
+        header h3 {
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: normal;
+        }
+        
+        header a img {
+            display: block;
+            margin: 1.5rem auto;
+            width: 3rem;
+            height: 3rem;
+            text-align: center;
+        }
+        
+        section {
+            width: 90vw;
+            margin: 0 auto;
+        }
+        
+        section ul li,
+        footer .footer_screen {
+            margin: 3rem 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        section ul li img {
+            width: 90vw;
+        }
+        
+        section ul li h3 {
+            font-size: 2.1rem;
+            padding: 1.2rem 0;
+            font-weight: normal;
+            opacity: 0;
+            margin-top: 10rem;
+            transition: all 1.25s ease-in-out;
+        }
+        
+        section ul li p {
+            font-size: 0.85rem;
+            line-height: 1.5rem;
+            font-weight: normal;
+        }
+        
+        footer .footer_screen {
+            width: 100vw;
+            height: 32vh;
+            margin: 2rem auto;
+            background: url(Img/bottom_bg.png) no-repeat;
+            background-size: 100%;
+            position: relative;
+        }
+        
+        footer .multi_screen {
+            position: relative;
+        }
+        
+        footer .multi_screen>img {
+            width: 100vw;
+        }
+        
+        footer .multi_screen a {
+            position: absolute;
+            transform: translateY(-55%);
+            top: 50%;
+            left: 10%;
+            width: 25vw;
+        }
+        
+        footer .multi_screen a img {
+            width: inherit;
+            height: inherit;
+        }
+        
+        footer .multi_screen a::after {
+            content: '扫码下载APP';
+            color: #fff;
+            display: block;
+            clear: both;
+            position: absolute;
+        }
+        
+        footer .footer_screen h3 {
+            font-size: 1.2rem;
+        }
+        
+        footer .footer_screen p {
+            font-size: 1rem;
+        }
+        
+        footer .footer_screen p:last-child {
+            font-size: 0.733rem;
+            color: #ccc;
+        }
+        
+        footer .footer_screen img {
+            width: 10rem;
+            height: 2.6rem;
+        }
+        
+        .PAD5 {
+            padding: .5rem 0
+        }
+        
+        nav {
+            background: rgba(0, 0, 0, .65);
+            height: 8vh;
+            width: 120vw;
+            left: -10vw;
+            position: fixed;
+            bottom: 0;
+            transition: all 0.8s ease-in-out;
+        }
+        
+        nav a {
+            width: 10rem;
+            height: 2.6rem;
+            display: block;
+        }
+        
+        nav p,
+        nav a {
+            font-size: 2.2em;
+            color: #fff;
+            position: absolute;
+            right: 10vw;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+        
+        nav a {
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        
+        nav p:nth-child(3) {
+            left: 2vw
+        }
+        
+        nav a img {
+            width: 10rem;
+            height: 2.6rem;
+        }
+        
+        .active {
+            margin-top: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class='video_play'>
+            <video id="myVideo" class="bloc-video" poster="Img/video_bg.png" preload="auto" width="100%">
+                <source src="http://static.xiaojs.cn/xiaojs_index_Video.mp4" type="video/mp4" />
+            </video>
+            <h3>人人可用的直播教室</h3>
+            <a href="javascript:;"><img class='play_btn' src="Img/video_play.png" alt=""></a>
+        </div>
+    </header>
+    <section class='center_slide'>
+        <ul>
+            <li>
+                <h3>多人直播教学互动</h3>
+                <p class="little_title PAD5">直播老师可以邀请多名参课学生上台直播互动，让在线教学更具临场感</p>
+                <img src="Img/more_interaction.png">
+            </li>
+            <li>
+                <h3>多功能电子白板</h3>
+                <p class="little_title PAD5">多块白板任意切换，涂鸦、写板书、绘制图形、截图、加载课件(PPT、图片、Word、PDF)</p>
+                <img src="Img/whiteboard.png">
+            </li>
+            <li>
+                <h3>班级及公开课管理</h3>
+                <p class="little_title PAD5">开设公开课，创建班级及角色权限管理，课表智能排课及课程提醒，云存储大容量资料库</p>
+                <img src="Img/class_manage.png"></li>
+        </ul>
+    </section>
+    <footer class='bottom_slide'>
+        <div class='multi_screen'>
+            <img src="Img/multi_screen.gif" />
+            <a href="javascript:;"><img src="Img/phone-xma.png" /></a>
+        </div>
+        <div class='footer_screen'>
+            <h3 class='PAD5'>"熟悉的课堂，新奇的教学方式"</h3>
+            <p class='PAD5'>免费开始体验吧</p>
+            <a class='PAD5' href="javascript:;"><img src="Img/download_app.png" /></a>
+            <p>COPYRIGHT © 2016 XIAOJS.CN 渝ICP备 16013658号</p>
+        </div>
+    </footer>
+    <nav class='bottom_slide'>
+        <a href='http://www.baidu.com'><img src="Img/download_app.png" /></a>
+        <p>></p>
+        <p>
+            <</p>
+    </nav>
+</body>
+<script src='http://libs.baidu.com/jquery/2.0.0/jquery.js'></script>
+<script>
+    $(function() {
+        var btn = $('.bottom_slide'),
+            nodeTop = $('.center_slide').find('h3'),
+            playBtn = $('.play_btn'),
+            playVideo = $('.video_play'),
+            playVideop = playVideo.find('h3'),
+            playVideoa = playVideo.find('a'),
+            flag = true,
+            playflag = true
+
+        $('video').addClass('pause')
+        nodeTop.eq(0).addClass('active')
+        $('video').get(0).onended = function() {
+            playVideoa.css('opacity', 1)
+            playVideop.css('opacity', 1)
+        }
+
+        playBtn.click(function() {
+            if ($("video").hasClass('pause')) {
+                $("video").trigger("play");
+                $("video").removeClass('pause');
+                $("video").addClass('play');
+                playVideoa.css('opacity', 0)
+                playVideop.css('opacity', 0)
+            } else {
+                $("video").trigger("pause");
+                $("video").removeClass('play');
+                $("video").addClass('pause');
+                playVideoa.css('opacity', 1)
+                playVideop.css('opacity', 1)
+            }
+        });
+
+        pbtn = btn.children('p').eq(1);
+        pbtn.on('click', function() {
+            if (flag) {
+                btn.css('left', '90vw')
+                flag = false
+            } else {
+                btn.css('left', '-10vw')
+                flag = true
+            }
+        })
+
+        function get() {
+            $(window).on('scroll', function(e) {
+                check(nodeTop);
+                if ($(document).height() - window.innerHeight - $(document).scrollTop() < 160) {
+                    btn.css('left', '90vw')
+                    playflag = false
+                } else if ($(document).height() - window.innerHeight - $(document).scrollTop() > 160 && playflag == false) {
+                    btn.css('left', '-10vw')
+                    playflag = true
+                }
+            })
+        }
+
+        function check(node) {
+            for (var i = 1; i < node.length; i++) {
+                if (node.eq(i).offset().top - $(window).scrollTop() > 0　 && node.eq(i).offset().top - $(window).scrollTop() < 600) {
+                    node.eq(i).addClass('active');
+                }
+            }
+        }
+
+
+        get()
+    })
+</script>
+
+
+</html>
