@@ -1,397 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>My resume</title>
-	<style>
-		*{
-			margin: 0;padding: 0;
-		}
-		body{
-			font-family: "Scytale","Microsoft YaHei",sans-serif;
-		}
-		a{
-			text-decoration: none;
-			color: white;
-		}
-		li{
-			list-style: none;
-		}
-		.layout{
-			width: 980px;
-			margin: 0 auto;
-		}
-		.layout::after{
-			content: '';
-			display: block;
-			clear: both;
-		}
-		.layout_inside{
-			width: 85%;
-			margin: 0 auto;
-		}
-		.slide_left_content{
-			width: 38.196%;
-			float: left;
-			background: #223;
-			height: 1430px;
-		}
-		.slide_right_content{
-			width: 61.804%;
-			height: 1430px;
-			float: left;
-			background: rgba(233,233,233,.7);
-		}
-		.slide_left_content .layout_inside>div{
-			text-align: center;
-			width: 100%;
-			color: white;
-			border-bottom: 2px solid white;
-		}
-		.slide_left_content .layout_inside .auther{
-			margin-top: 20px;
-			height: 50px;
-			font-size: 24px;
-			line-height: 50px
-		}
-		.slide_left_content .layout_inside .job_list{
-			margin-top: 20px;
-			line-height: 1.3em;
-			font-size: 18px;
-		}
-		.slide_left_content .layout_inside .job_list p:nth-child(2){
-			font-size: 14px;
-			margin-bottom: 16px;
-		}
-		.slide_left_content .layout_inside .about_me>ul{
-			margin-top: 20px;
-			margin-bottom: 20px;
-		}
-		.slide_left_content .layout_inside .about_me>ul>li{
-			list-style: none;
-			text-align: left;
-			width: 100%;
-			height: 30px;
-			line-height: 30px;
-			font-size: 14px;
-		}
-		.slide_left_content .layout_inside .about_me ul li span {
-			text-align: right;
-			display: inline-block;
-			width: 120px;
-		}
-		.slide_left_content .layout_inside .technical h2{
-			font-weight: 400;
-			width: 28%;
-			height: 49px;
-			line-height: 49px;
-			font-size: 16px;
-			float: left;
-		}
-		.slide_left_content .layout_inside .technical:after{
-			content: '';
-			display: block;
-			clear: both;
-		}
-		.slide_left_content .appraise{
-			margin-top: 310px;
-			border-bottom-style: none !important;
-		}
-		.slide_left_content .appraise p{
-			line-height: 1.5em;
-			font-family: 'Times New Roman';
-			width: 300px;
-			align-items: left;
 
-		}
-		.progress{
-			float: left;
-			width: 70%;
-			  height: 8px;
-			  background: #262626;
-			  padding: 2px;
-			  margin-bottom: 15px;
-			  overflow: visible;
-			  border-radius: 5px;
-			  border-top: 1px solid #000;
-			  border-bottom: 1px solid #7992a8;
-			  margin-top: 20px;
-		  }
-		  .progress .progress_bar{
-			  border-radius: 5px;
-			  height: 8px;
-			  position: relative;
-			  animation: animate-positive 2s;
-			  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
-			  background-size: 20px 20px;
-			  transition: width .6s ease;
+	<head>
+		<meta charset="UTF-8">
+		<title>My resume</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font-family: "Scytale", "Microsoft YaHei", sans-serif;
+			}
+			
+			a {
+				text-decoration: none;
+				color: white;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			.layout {
+				width: 980px;
+				margin: 0 auto;
+			}
+			
+			.layout::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			
+			.layout_inside {
+				width: 90%;
+				margin: 0 auto;
+			}
+			
+			.slide_left_content {
+				width: 38.196%;
+				float: left;
+				background: #223;
+				height: 1440px;
+			}
+			
+			.slide_right_content {
+				width: 61.804%;
+				height: 1440px;
+				float: left;
+				background: rgba(233, 233, 233, .7);
+			}
+			
+			.slide_left_content .layout_inside>div {
+				text-align: center;
+				width: 100%;
+				color: white;
+				border-bottom: 2px solid white;
+			}
+			
+			.slide_left_content .layout_inside .auther {
+				margin-top: 20px;
+				height: 50px;
+				font-size: 24px;
+				line-height: 50px
+			}
+			
+			.slide_left_content .layout_inside .job_list {
+				margin-top: 20px;
+				line-height: 1.3em;
+				font-size: 18px;
+			}
+			
+			.slide_left_content .layout_inside .job_list p:nth-child(2) {
+				font-size: 14px;
+				margin-bottom: 16px;
+			}
+			
+			.slide_left_content .layout_inside .about_me>ul {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			
+			.slide_left_content .layout_inside .about_me>ul>li {
+				list-style: none;
+				text-align: left;
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				font-size: 14px;
+			}
+			
+			.slide_left_content .layout_inside .about_me ul li span {
+				text-align: right;
+				display: inline-block;
+				width: 120px;
+			}
+			
+			.slide_left_content .layout_inside .technical h2 {
+				font-weight: 400;
+				width: 28%;
+				height: 49px;
+				line-height: 49px;
+				font-size: 16px;
+				float: left;
+			}
+			
+			.slide_left_content .layout_inside .technical:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			
+			.slide_left_content .appraise {
+				margin-top: 310px;
+				border-bottom-style: none !important;
+			}
+			
+			.slide_left_content .appraise p {
+				line-height: 1.5em;
+				font-family: 'Times New Roman';
+				width: 300px;
+				align-items: left;
+			}
+			
+			.progress {
+				float: left;
+				width: 70%;
+				height: 8px;
+				background: #262626;
+				padding: 2px;
+				margin-bottom: 15px;
+				overflow: visible;
+				border-radius: 5px;
+				border-top: 1px solid #000;
+				border-bottom: 1px solid #7992a8;
+				margin-top: 20px;
+			}
+			
+			.progress .progress_bar {
+				border-radius: 5px;
+				height: 8px;
+				position: relative;
+				animation: animate-positive 2s;
+				background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+				background-size: 20px 20px;
+				transition: width .6s ease;
+			}
+			
+			.progress .progress_value {
+				display: block;
+				padding: 3px 7px;
+				font-size: 10px;
+				color: #fff;
+				border-radius: 4px;
+				background: #191919;
+				border: 1px solid #000;
+				position: absolute;
+				top: -30px;
+				right: -10px;
+			}
+			
+			.progress .progress_value:after {
+				content: "";
+				border-top: 10px solid #191919;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				position: absolute;
+				bottom: -6px;
+				left: 26%;
+			}
+			
+			.progress_bar.active {
+				animation: reverse progress_bar 0.40s linear infinite, animate-positive 2s;
+			}
+			
+			@-webkit-keyframes animate-positive {
+				0% {
+					width: 0;
+				}
+			}
+			
+			@keyframes animate-positive {
+				0% {
+					width: 0;
+				}
+			}
+			
+			@keyframes progress_bar {
+				0% {
+					background-position: 20px 0;
+				}
+				100% {
+					background-position: 0 0;
+				}
+			}
+			
+			.slide_right_content .title {
+				margin: 20px 0 10px 0;
+				border-radius: 5px;
+				background: #222;
+				color: white;
+				padding: 5px 20px;
+			}
+			
+			.slide_right_content .my_technical ul li {
+				line-height: 1.5em;
+			}
+			
+			.slide_right_content .my_projects ul li,
+			.slide_right_content .my_little_projects ul li {
+				width: 100%;
+				height: 120px;
+				margin-bottom: 10px;
+			}
+			
+			.slide_right_content .my_projects ul li .project_message,
+			.slide_right_content .my_little_projects ul li .project_message {
+				padding-left: 145px;
+				line-height: 1.3em;
+			}
+			
+			.slide_right_content .my_projects ul li a,
+			.slide_right_content .my_little_projects ul li a {
+				display: inline-block;
+				border-bottom: 2px solid #222;
+				color: #222;
+			}
+			
+			.slide_right_content .my_projects ul li img,
+			.slide_right_content .my_little_projects ul li img {
+				width: 130px;
+				float: left;
+			}
+			
+			.use_style {
+				padding: 0px 6px;
+				margin-left: 4px;
+				display: inline-block;
+				border-radius: 5px;
+				color: #fff;
+			}
+			
+			.my_projects .work_line {
+				display: flex;
+				justify-content: space-between;
+				align-content: center;
+			}
+			
+			.my_projects .work_line a{
+				color: #233;
+				line-height: 2em;
+			}
+			
+			.my_projects .work_content{
+				padding-top:15px;
+				line-height: 1.5em;
+			}
+			
+			.css_style {
+				background: rgb(3, 38, 58)
+			}
+			
+			.html_style {
+				background: rgb(20, 68, 106)
+			}
+			
+			.jq_style {
+				background: rgb(0, 49, 79)
+			}
+			
+			.ajax_style {
+				background: rgb(3, 35, 14)
+			}
+			
+			.react_style {
+				background: rgb(17, 63, 61)
+			}
+			
+			.vue_style {
+				background: rgb(39, 72, 98)
+			}
+		</style>
+	</head>
 
-		  }
-		  .progress .progress_value{
-			  display: block;
-			  padding: 3px 7px;
-			  font-size: 10px;
-			  color: #fff;
-			  border-radius: 4px;
-			  background: #191919;
-			  border: 1px solid #000;
-			  position: absolute;
-			  top: -30px;
-			  right: -10px;
-		  }
-		  .progress .progress_value:after{
-			  content: "";
-			  border-top: 10px solid #191919;
-			  border-left: 10px solid transparent;
-			  border-right: 10px solid transparent;
-			  position: absolute;
-			  bottom: -6px;
-			  left: 26%;
-		  }
-		  .progress_bar.active{
-			  animation: reverse progress_bar 0.40s linear infinite, animate-positive 2s;
-		  }
-		  @-webkit-keyframes animate-positive{
-			  0% { width: 0; }
-		  }
-		  @keyframes animate-positive{
-			  0% { width: 0; }
-		  }
-		  @keyframes progress_bar{
-		  	0%{
-		  		background-position: 20px 0;
-		  	}
-		  	100%{
-		  		background-position: 0 0;
-		  	}
-		  }
-		  .slide_right_content .title{
-			margin:20px 0 10px 0;
-			border-radius: 5px;
-			background: #222;
-			color: white;
-			padding: 5px 20px;
-		  }
-		  .slide_right_content .my_technical ul li{
-		  	line-height: 1.5em;
-		  }
-		  .slide_right_content .my_projects ul li,.slide_right_content .my_little_projects ul li{
-		  	width: 100%;
-		  	height: 120px;
-		  	margin-bottom: 10px;
-		  }
-		  .slide_right_content .my_projects ul li .project_message,.slide_right_content .my_little_projects ul li .project_message{
-		  	padding-left: 145px;
-		  	line-height: 1.3em;
-		  }
-		  .slide_right_content .my_projects ul li a,.slide_right_content .my_little_projects ul li a{
-		  	display: inline-block;
-		  	border-bottom: 2px solid #222;
-		  	color: #222;
-
-		  }
-		  .slide_right_content .my_projects ul li img,.slide_right_content .my_little_projects ul li img{
-		  	width: 130px;
-		  	float: left;
-		  }
-		  .use_style{
-		  	padding: 0px 6px;
-		  	margin-left: 4px;
-		  	display: inline-block;
-		  	border-radius: 5px;
-		  	color: #fff;
-		  }
-		  .css_style{
-		  	background: rgb(3,38,58)
-		  }
-		  .html_style{
-		  	background: rgb(20,68,106)
-		  }
-		  .jq_style{
-		  	background: rgb(0,49,79)
-		  }
-		  .ajax_style{
-		  	background: rgb(3,35,14)
-		  }
-		  .react_style{
-		  	background: rgb(17,63,61)
-		  }
-		  .vue_style{
-		  	background: rgb(39,72,98)
-		  }
-	</style>
-</head>
-<body>
-	<div class='layout'>
-		<div class='slide_left_content'>
-			<div class='layout_inside'>
-				<div class='auther'>李子豪</div>
-				<div class='job_list'>
-					<p>前端工程师</p>
-					<p>The Front End Engineer</p>
-				</div>
-				<div class='about_me'>
-					<ul class='layout_inside'>
-						<li><span>意向职位：</span>Web前端开发</li>
-						<li><span>期望待遇：</span>面议</li>
-						<li><span>工作经历：</span>一年以内</li>
-						<li><span>学历：</span>本科</li>
-						<li><span>生日：</span>1991年2月17日</li>
-						<li><span>求职城市：</span>深圳 重庆</li>
-						<li><span>QQ：</span>784757555</li>
-						<li><span>电话：</span>185 8036 0217</li>
-						<li><span>邮箱：</span><a href="mailto:aleenli1992@gmail.com" style='font-size:13px'>aleenli1992@gmail.com</a></li>
-						<li><span>博客：</span><a href="https://aleenl.github.io">aleenl.github.io</a></li>
-						<li><span>GitHub：</span><a href="https://github.com/AleenL">github.com/AleenL</a></li>
-					</ul>
-				</div>
-				<div class='technical'>
-					<div>
-						<h2>HTML</h2>
-						<div class='progress'>
-							<div class='progress_bar active' style='width:80%;background-color: #5bc0de'>
-								<div class='progress_value'>80%</div >
+	<body>
+		<div class='layout'>
+			<div class='slide_left_content'>
+				<div class='layout_inside'>
+					<div class='auther'>李子豪</div>
+					<div class='job_list'>
+						<p>前端工程师</p>
+						<p>The Front End Engineer</p>
+					</div>
+					<div class='about_me'>
+						<ul class='layout_inside'>
+							<li><span>意向职位：</span>Web前端开发</li>
+							<li><span>期望待遇：</span>面议</li>
+							<li><span>工作经历：</span>一年以内</li>
+							<li><span>学历：</span>本科</li>
+							<li><span>生日：</span>1991年2月17日</li>
+							<li><span>求职城市：</span>深圳 重庆</li>
+							<li><span>QQ：</span>784757555</li>
+							<li><span>电话：</span>185 8036 0217</li>
+							<li><span>邮箱：</span>
+								<a href="mailto:aleenli1992@gmail.com" style='font-size:13px'>aleenli1992@gmail.com</a>
+							</li>
+							<li><span>博客：</span>
+								<a href="https://aleenl.github.io">aleenl.github.io</a>
+							</li>
+							<li><span>GitHub：</span>
+								<a href="https://github.com/AleenL">github.com/AleenL</a>
+							</li>
+						</ul>
+					</div>
+					<div class='technical'>
+						<div>
+							<h2>HTML</h2>
+							<div class='progress'>
+								<div class='progress_bar active' style='width:70%;background-color: #5bc0de'>
+									<div class='progress_value'>70%</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<h2>CSS</h2>
+							<div class='progress'>
+								<div class='progress_bar active' style='width:70%;background-color: #5bc0de'>
+									<div class='progress_value'>70%</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<h2>JavaScript</h2>
+							<div class='progress'>
+								<div class='progress_bar active' style='width:70%;background-color: #5bc0de'>
+									<div class='progress_value'>70%</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<h2>jQuery</h2>
+							<div class='progress'>
+								<div class='progress_bar active' style='width:70%;background-color: #5bc0de'>
+									<div class='progress_value'>70%</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<h2>Less</h2>
+							<div class='progress'>
+								<div class='progress_bar active' style='width:50%;background-color: #5bc0de'>
+									<div class='progress_value'>50%</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<h2>Vue</h2>
+							<div class='progress'>
+								<div class='progress_bar active' style='width:50%;background-color: #5bc0de'>
+									<div class='progress_value'>50%</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div>
-						<h2>CSS</h2>
-						<div class='progress'>
-							<div class='progress_bar active' style='width:80%;background-color: #5bc0de'>
-								<div class='progress_value'>80%</div >
-							</div>
-						</div>
+					<div style='border-bottom: 0px;margin-top: 50px;line-height:2em'>
+						<h3><a href="https://aleenl.github.io/Myresume/Resume.pdf">下载我的简历(pdf)</a></h3>
+						<h3><a href="https://aleenl.github.io/Myresume/Resume.html">线上简历</a></h3>
 					</div>
-					<div>
-						<h2>JavaScript</h2>
-						<div class='progress'>
-							<div class='progress_bar active' style='width:80%;background-color: #5bc0de'>
-								<div class='progress_value'>80%</div >
-							</div>
-						</div>
-					</div>
-					<div>
-						<h2>jQuery</h2>
-						<div class='progress'>
-							<div class='progress_bar active' style='width:80%;background-color: #5bc0de'>
-								<div class='progress_value'>80%</div >
-							</div>
-						</div>
-					</div>
-					<div>
-						<h2>Less</h2>
-						<div class='progress'>
-							<div class='progress_bar active' style='width:60%;background-color: #5bc0de'>
-								<div class='progress_value'>60%</div >
-							</div>
-						</div>
-					</div>
-					<div>
-						<h2>Vue</h2>
-						<div class='progress'>
-							<div class='progress_bar active' style='width:50%;background-color: #5bc0de'>
-								<div class='progress_value'>50%</div >
-							</div>
-						</div>
-					</div>
-				</div>
-				<div style='border-bottom: 0px;margin-top: 50px;line-height:2em'>
-				<h3><a href="https://aleenl.github.io/Myresume/Resume.pdf">下载我的简历(pdf)</a></h3>
-				<h3><a href="https://aleenl.github.io/Myresume/Resume.html">线上简历</a></h3>
 				</div>
 			</div>
-		</div>
-		<div class='slide_right_content'>
-			<div class='layout_inside'>
-				<div class='my_technical'>
-					<h3 class='title'>掌握技术</h3>
-					<ul>
-						<li>静态页面: 100%还原设计稿，像素级页面制作能力，熟悉瀑布流，懒加载等布局模式</li>
-						<li>动态页面: 熟悉HTTP、AJAX、JSONP等技术，了解前后端分离开发模式</li>
-						<li>移动页面: 熟悉CSS 3、响应式页面等</li>
-						<li>前端框架: 了解Vue.js、React 基本原理，能使用前端框架开发富交互式应用</li>
-						<li>工作能力: 乐于学习新兴技术，不怕吃苦，喜欢接触新东西</li>
-						<li>开发工具: 熟练使用Git、Emmet、Markdown等前端开发工具</li>
-						<li>其他技能: 熟练使用PhotoShop切图，像素级重构</li>
-					</ul>	
-				</div>
-				<div  class='my_projects'>
-					<h3 class='title'>项目经历</h3>
-					<ul>
-						<li>
-							<img src="http://upload-images.jianshu.io/upload_images/3257837-4f08826149215bbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
-							<div class='project_message'>
-								<h3><a href="https://aleenl.github.io/mobilefm/music.html">手机音乐播放器</a></h3>
-								<p>简介：依赖百度音乐库资源，实现播放／暂停、下一曲、上一曲、播放进度、实时歌词显示</p>
-								<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span><span class='use_style ajax_style'>Ajax</span></p>
-							</div>
-						</li>
-						<li>
-							<img src="http://upload-images.jianshu.io/upload_images/3257837-80390e1f720c4a93.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
-							<div class='project_message'>
-								<h3><a href="https://aleenl.github.io/React-demo/build/index.html">React TodoList</a></h3>
-								<p>简介：创建一个基于React框架下的代办事项，实现了和用户的富交互，利用leanCloud创建了注册和登陆功能</p>
-								<p>主要运用技术：<span class='use_style react_style'>React</span><span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
-							</div>
-						</li>
-						<li>
-							<img src="http://upload-images.jianshu.io/upload_images/3257837-10fa07a7515034e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
-							<div class='project_message'>
-								<h3><a href="https://aleenl.github.io/Fangzhan/PalyStation@4.html">仿站 SONY 中国</a></h3>
-								<p>简介：高度还原SONY中国的页面，实现像素级重构</p>
-								<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
-							</div>
-						</li>
-						<li>
-							<img src="http://upload-images.jianshu.io/upload_images/3257837-7914d39660a851f5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
-							<div class='project_message'>
-								<h3><a href="https://aleenl.github.io/myresumer/dist">Vue 简历编辑器</a></h3>
-								<p>基于Vue框架下实现的一个简历编辑器，对用户所输入的信息可以实时的显示在页面上，结合leanCloud可以保存用户输入的信息，也同时提供了注册和登陆功能。</p>
-								<p>主要运用技术：<span class='use_style vue_style'>Vue</span><span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
-							</div>
-						</li>
-					</ul>	
-				</div>
-				<div class='my_little_projects'>
-					<h3 class='title'>其他小项目</h3>
-					<ul>
-						<li>
-							<img src='http://upload-images.jianshu.io/upload_images/3257837-1c2e735a3261e10b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' alt="">
-							<div class='project_message'>
-								<h3><a href="https://aleenl.github.io/Vuedemo/todoList.html">Vue TodoList</a></h3>
-								<p>简介：创建一个基于Vue框架下的代办事项，实现了和用户的富交互，利用leanCloud创建了注册和登陆功能</p>
-								<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span><span class='use_style vue_style'>Vue</span></p>
-							</div>
-						</li>
+			<div class='slide_right_content'>
+				<div class='layout_inside'>
+					<div class='my_technical'>
+						<h3 class='title'>掌握技术</h3>
 						<ul>
-						<li>
-							<img src="http://upload-images.jianshu.io/upload_images/3257837-c6e3063ea369d8d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
-							<div class='project_message'>
-								<h3><a href="https://aleenl.github.io/new-carousel/newCarouel.html">小轮播项目</a></h3>
-								<p>简介：一个小型的轮播项目，实现的下一页和上一页的功能，同时提供缩略图，加载进度等</p>
-								<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
+							<li>静态页面: 100%还原设计稿，像素级页面制作能力，熟悉瀑布流，懒加载等布局模式</li>
+							<li>动态页面: 熟悉HTTP、AJAX、JSONP、mock数据等技术，了解前后端分离开发模式</li>
+							<li>移动页面: 熟悉CSS3、Flex、响应式页面、MUI、jqueryMoblie等移动开发工具，熟悉webpack打包工具</li>
+							<li>前端框架: 了解Vue.js、React 基本原理，能使用前端框架开发富交互式应用</li>
+							<li>工作能力: 乐于学习新兴技术，不怕吃苦，能及时完成任务</li>
+							<li>开发工具: 熟练使用Git、Emmet、Markdown、SVN等前端开发工具</li>
+							<li>其他技能:了解合作开发模式，了解IDEA开发流程</li>
+						</ul>
+					</div>
+					<div class='my_projects'>
+						<h3 class='title'>工作经历</h3>
+						<div class='work_line'>
+							<img src="Img/logo.png" alt="">
+							<div>
+								<h3><a href="https://aleenl.github.io/Fangzhan/PalyStation@4.html">小教室——直播平台</a></h3>
+								<p>工作年限：2017.03-至今</p>
 							</div>
-						</li>
-						<li>
-							<img src="http://upload-images.jianshu.io/upload_images/3257837-761442f7cbde23f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
-							<div class='project_message'>
-								<h3><a href="https://aleenl.github.io/new-carousel/computer.html">网页计算器</a></h3>
-								<p>简介：一个简易的网页计算器，界面模仿了iphone计算器的页面，实现了简单的加减乘除计算</p>
-								<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
-							</div>
-						</li>
-						<li>
-							<img src="http://upload-images.jianshu.io/upload_images/3257837-941c5a23886b2d0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
-							<div class='project_message'>
-								<h3><a href="https://aleenl.github.io/MusicBox/">网页音乐播放器</a></h3>
-								<p>简介：依赖百度音乐库资源，实现播放／暂停、下一曲、上一曲、播放进度、实时歌词显示</p>
-								<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span><span class='use_style ajax_style'>Ajax</span></p></p>
-							</div>
-						</li>
-					</ul>
+
+						</div>
+						<div class='project_message'>
+							<p class='work_content'> 
+								负责网页的交互设计，前端页面的实现，和后端工作人员的联调，工作期间也写了很多可以复用的组件，了解H5开发模式
+							</p>
+						</div>
+						<h3 class='title'>项目经历</h3>
+						<ul>
+							<li>
+								<img src="http://upload-images.jianshu.io/upload_images/3257837-4f08826149215bbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
+								<div class='project_message'>
+									<h3><a href="https://aleenl.github.io/mobilefm/music.html">手机音乐播放器</a></h3>
+									<p>简介：依赖百度音乐库资源，实现播放／暂停、下一曲、上一曲、播放进度、实时歌词显示</p>
+									<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span><span class='use_style ajax_style'>Ajax</span></p>
+								</div>
+							</li>
+							<li>
+								<img src='http://upload-images.jianshu.io/upload_images/3257837-1c2e735a3261e10b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' alt="">
+								<div class='project_message'>
+									<h3><a href="https://aleenl.github.io/Vuedemo/todoList.html">Vue TodoList</a></h3>
+									<p>简介：创建一个基于Vue框架下的代办事项，实现了和用户的富交互，实现了获取本地天气状况和选择背景色功能，利用leanCloud创建了注册和登陆功能</p>
+									<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>webpack</span><span class='use_style jq_style'>jQuery</span><span class='use_style vue_style'>Vue</span></p>
+								</div>
+							</li>
+							<li>
+								<img src="http://upload-images.jianshu.io/upload_images/3257837-10fa07a7515034e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
+								<div class='project_message'>
+									<h3><a href="https://aleenl.github.io/Fangzhan/PalyStation@4.html">仿站 SONY 中国</a></h3>
+									<p>简介：高度还原SONY中国的页面，实现像素级重构</p>
+									<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
+								</div>
+							</li>
+							<li>
+								<img src="http://upload-images.jianshu.io/upload_images/3257837-7914d39660a851f5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
+								<div class='project_message'>
+									<h3><a href="https://aleenl.github.io/myresumer/dist">Vue 简历编辑器</a></h3>
+									<p>基于Vue框架下实现的一个简历编辑器，对用户所输入的信息可以实时的显示在页面上，结合leanCloud可以保存用户输入的信息，也同时提供了注册和登陆功能。</p>
+									<p>主要运用技术：<span class='use_style vue_style'>Vue</span><span class='use_style html_style'>HTML</span><span class='use_style css_style'>webpack</span><span class='use_style jq_style'>jQuery</span></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class='my_little_projects'>
+						<h3 class='title'>其他小项目</h3>
+						<ul>
+							<li>
+								<img src='http://upload-images.jianshu.io/upload_images/3257837-1c2e735a3261e10b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' alt="">
+								<div class='project_message'>
+									<h3><a href="https://aleenl.github.io/Vuedemo/todoList.html">Vue TodoList</a></h3>
+									<p>简介：创建一个基于Vue框架下的代办事项，实现了和用户的富交互，利用leanCloud创建了注册和登陆功能</p>
+									<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span><span class='use_style vue_style'>Vue</span></p>
+								</div>
+							</li>
+							<ul>
+								<li>
+									<img src="http://upload-images.jianshu.io/upload_images/3257837-c6e3063ea369d8d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
+									<div class='project_message'>
+										<h3><a href="https://aleenl.github.io/new-carousel/newCarouel.html">小轮播项目</a></h3>
+										<p>简介：一个小型的轮播项目，实现的下一页和上一页的功能，同时提供缩略图，加载进度等</p>
+										<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
+									</div>
+								</li>
+							</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</body>
+	</body>
+
 </html>
