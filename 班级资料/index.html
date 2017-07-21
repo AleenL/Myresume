@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+		* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			body {
+				font: 12px 'Microsoft Yahei', tahoma, arial, 'Hiragino Sans GB', sans-serif;
+				background: #aaa;
+				-webkit-text-size-adjust: 100%;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.flexBetween {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			.flexCenter {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.yourData {
+				width: 1200px;
+				background: #fff;
+				margin: 0 auto
+			}
+			
+			.yourData .layout {
+				width: 95%;
+				margin: 30px auto;
+			}
+			
+			.yourData .flieItems div input {
+				width: 230px;
+				height: 30px;
+				border: none;
+				background: rgb(236, 236, 236);
+				outline: none;
+				padding-left: 20px;
+			}
+			
+			.yourData .flieItems div ul {
+				margin: 20px 0;
+			}
+			
+			.yourData .flieItems div ul li {
+				border: 1px solid #ccc;
+				padding: 8px 15px;
+			}
+			
+			.yourData .flieItems div:nth-child(3) ul li:first-child {
+				border: none;
+				padding: 8px 0
+			}
+			
+			.yourData .flieItems div:nth-child(3) ul li:first-child a,
+			.yourData .centerContent .crumbList p {
+				color: rgb(32, 108, 250);
+			}
+			
+			.yourData .flieItems div:nth-child(3) {
+				width: 270px;
+			}
+			
+			.yourData .flieItems div:nth-child(2) {
+				width: 220px
+			}
+			
+			.yourData .flieItems div:nth-child(1) {
+				width: 570px
+			}
+			
+			.yourData .flieItems div:nth-child(3) ul li:nth-child(n+2) {
+				background: rgb(32, 108, 250);
+				border-radius: 5px;
+				color: #fff;
+			}
+			
+			.yourData .centerContent {
+				margin-bottom: 20px;
+			}
+			
+			.yourData .centerContent .crumbList p {
+				display: inline-block;
+				margin-right: -3px;
+			}
+			
+			.yourData .centerContent .crumbList p:last-child {
+				color: black
+			}
+			
+			.yourData .centerContent .crumbList p:last-child span {
+				display: none;
+			}
+			
+			.yourData .centerContent .prgrossList {
+				width: 225px;
+				font-size: 14px;
+				color: #aaa
+			}
+			
+			.yourData .centerContent .prgrossList .progressBar {
+				width: 100px;
+				height: 10px;
+				background: rgb(236, 236, 236);
+			}
+			
+			.yourData .centerContent .prgrossList .progressBar .prgrossValue {
+				width: 30%;
+				height: 10px;
+				background: rgb(32, 108, 250);
+			}
+			
+			.yourData .footerContent {
+				align-items: flex-start;
+			}
+			
+			.yourData .footerContent .aslideLeft {
+				width: 120px;
+				height: 680px;
+				background: rgb(247, 247, 247);
+			}
+			
+			.yourData .footerContent .aslideLeft ul {
+				margin-top: 10px;
+			}
+			
+			.yourData .footerContent .aslideLeft ul li {
+				text-align: center;
+				height: 40px;
+				font-size: 14px;
+				line-height: 40px;
+			}
+			
+			.yourData .footerContent .aslideRight {
+				width: 1020px;
+			}
+			
+			.yourData .footerContent .aslideRight ul li {
+				height: 45px;
+				width: inherit;
+				border-bottom: 1px solid rgb(247, 247, 247);
+				font-size: 14px;
+			}
+			
+			.yourData .footerContent .aslideRight ul li:first-child {
+				background: rgb(236, 236, 236);
+				border: none;
+				font-size: 12px;
+				color: rgb(144, 144, 144)
+			}
+			
+			.yourData .footerContent .aslideRight ul label {
+				width: 620px;
+				line-height: 45px;
+				height: 45px;
+			}
+			
+			.yourData .footerContent .aslideRight ul li .chk_1+label {
+				background-color: #FFF;
+				border: 1px solid #C1CACA;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+				padding: 9px;
+				border-radius: 5px;
+				display: inline-block;
+				position: relative;
+				margin-right: 30px;
+			}
+			
+			.chk_1 { 
+    display: none; 
+} 
+			
+			.chk_1+label:active {
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+			}
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class='yourData'>
+			<div class='layout'>
+				<div class='flieItems flexBetween'>
+					<div class='flieSearch'><input type="text" placeholder="请输您的文件" /></div>
+					<div class='downFile'>
+						<ul class='flexBetween'>
+							<li>新建文件夹</li>
+							<li>分享</li>
+							<li>下载</li>
+						</ul>
+					</div>
+					<div class='downFile'>
+						<ul class='flexBetween'>
+							<li>
+								<a href="">超大文件上传？</a>
+							</li>
+							<li>上传文件</li>
+							<li>批量分享</li>
+						</ul>
+					</div>
+				</div>
+				<div class='centerContent flexBetween'>
+					<div class='crumbList'>
+						<p>全部文件<span>></span></p>
+						<p>人力资源师三级<span>></span></p>
+						<p>人力资源师<span>></span></p>
+					</div>
+					<div class='prgrossList flexBetween'>
+						<div class='progressBar'>
+							<div class='prgrossValue'>
+
+							</div>
+						</div>
+						<p class='nowValue'>168M / <span class='sumValue'>2G</span></p>
+						<p class='expansionSpace'>
+							<a href="javascript:;">扩充</a>
+						</p>
+					</div>
+				</div>
+				<div class='footerContent flexBetween'>
+					<div class='aslideLeft'>
+						<ul>
+							<li>全部文件</li>
+							<li>图片</li>
+							<li>Word</li>
+							<li>PDF</li>
+							<li>截图</li>
+							<li>随堂录像</li>
+							<li>视频</li>
+						</ul>
+					</div>
+					<div class='aslideRight'>
+						<ul>
+							<li>
+								<label class="checkbox share-checkbox" id="checkbox_a1" class="chk_1">
+                            		<input type="checkbox" name="shareCheckAll">
+                            		<span>文件名</span>
+                        		</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+
+</html>
