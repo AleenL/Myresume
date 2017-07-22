@@ -157,6 +157,7 @@
 			.yourData .footerContent .aslideRight ul li {
 				height: 45px;
 				width: inherit;
+
 				border-bottom: 1px solid rgb(247, 247, 247);
 				font-size: 14px;
 			}
@@ -168,31 +169,57 @@
 				color: rgb(144, 144, 144)
 			}
 			
-			.yourData .footerContent .aslideRight ul label {
+			.yourData .footerContent .aslideRight ul li div:first-child{
 				width: 620px;
 				line-height: 45px;
 				height: 45px;
-			}
-			
-			.yourData .footerContent .aslideRight ul li .chk_1+label {
-				background-color: #FFF;
-				border: 1px solid #C1CACA;
-				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-				padding: 9px;
-				border-radius: 5px;
-				display: inline-block;
 				position: relative;
-				margin-right: 30px;
 			}
-			
-			.chk_1 { 
-    display: none; 
-} 
-			
-			.chk_1+label:active {
-				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+			.yourData .footerContent .aslideRight ul li p{
+				
+				width: 200px;
 			}
-		}
+			.squaredThree {
+  				width: 650px;
+  				position: relative;
+			}
+
+			.squaredThree span{
+				margin-left: 40px
+			}
+			.squaredThree label {
+ 				width: 20px;
+  				height: 20px;
+  				cursor: pointer;
+  				position: absolute;
+  				top: 50%;
+  				margin-top: -10px;
+  				left: 20px;
+  				background: #fff;
+  				border-radius: 5px;
+  				border: 1px solid #ccc;
+			}
+			.squaredThree label:after {
+  				content: '';
+  				width: 9px;
+  				height: 5px;
+  				position: absolute;
+  				top: 3px;
+  				left: 3px;
+  				border: 3px solid #233;
+  				border-top: none;
+  				border-right: none;
+  				background: transparent;
+  				opacity: 0;
+  				transform: rotate(-45deg);
+			}
+			.squaredThree input[type=checkbox] {
+				visibility: hidden;
+			}
+			.squaredThree input[type=checkbox]:checked + label:after {
+  				opacity: 1;
+			}
+
 		</style>
 	</head>
 
@@ -250,11 +277,14 @@
 					</div>
 					<div class='aslideRight'>
 						<ul>
-							<li>
-								<label class="checkbox share-checkbox" id="checkbox_a1" class="chk_1">
-                            		<input type="checkbox" name="shareCheckAll">
-                            		<span>文件名</span>
-                        		</label>
+							<li class='flexBetween'>
+								<div class="squaredThree">
+    								<input type="checkbox" value="None" id="squaredThree" name="check" checked />
+      								<label for="squaredThree"></label>
+      								<span>文件名</span>
+   								</div>
+   								<p>大小/时长</p>
+   								<p>修改时间</p>
 							</li>
 						</ul>
 					</div>
