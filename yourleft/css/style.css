@@ -1,0 +1,265 @@
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			@font-face {
+				font-family: 'iconfont';
+				/* project id 299445 */
+				src: url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.eot');
+				src: url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.eot?#iefix') format('embedded-opentype'), url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.woff') format('woff'), url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.ttf') format('truetype'), url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.svg#iconfont') format('svg');
+			}
+			
+			.iconfont {
+				font-family: iconfont !important;
+				font-style: normal;
+			}
+			
+			body {
+				background: #fff;
+				color: #333;
+				font-size: 12px;
+				font-family: "微软雅黑", "Arial Narrow";
+			}
+			
+			a {
+				color: #2d374b;
+				text-decoration: none
+			}
+			
+			em {
+				font-style: normal
+			}
+			
+			li {
+				list-style: none
+			}
+			
+			img {
+				border: 0;
+				vertical-align: middle
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			p {
+				word-wrap: break-word
+			}
+			
+			.section.section1 {
+				background: rgb(61, 79, 178);
+			}
+			
+			.section.section2 {
+				background: rgb(61, 79, 178);
+				background-image: url(../img/yourselfAge.png);
+				background-blend-mode: lighten;
+				background-size: cover;
+				background-position: center;
+			}
+			
+			.section.section3 {
+				background: rgb(61, 79, 178);
+				background-image: url(../img/getAge.jpg);
+				background-blend-mode: lighten;
+				background-size: cover;
+				background-position: center;
+			}
+			
+			.section.section1 img {
+				width: 100%;
+			}
+			
+			.section.section1 h2 {
+				margin: 0 auto;
+				width: 80%;
+				text-align: center;
+				color: #fff;
+				font-size: 1.2rem;
+				font-weight: 200;
+			}
+			
+			.section.section1 p {
+				padding: 1rem 0;
+				font-size: 0.7rem;
+				width: 90%;
+				color: #fff;
+				text-align: right;
+				font-weight: 200;
+			}
+			
+			.interBtn {
+				display: block;
+				color: #fff;
+				width: 9rem;
+				height: 3rem;
+				font-size: 1.5rem;
+				line-height: 3rem;
+				text-align: center;
+				background: rgba(24, 255, 133, .6);
+				border-radius: 5px;
+				margin: 1.5rem auto;
+				box-shadow: 0 0 30px #888;
+			}
+			
+			.interBtn.yourLife{
+				margin-top: 6rem
+			}
+
+			.section {
+				position: relative;
+			}
+			
+			.section.section2 .getAge,
+			.section.section3 .getAge {
+				width: 80%;
+				margin: 0 auto;
+			}
+			
+			.section.section2 .getAge input,
+			.section.section3 .getAge input {
+				margin-top: 2rem;
+				width: 100%;
+				height: 3rem;
+				text-indent: 1rem;
+				outline: none;
+				border-radius: 5px;
+				border: none;
+				font-size: 1rem;
+			}
+			
+			.section.section2 .getAge input:hover+.icon,
+			.section.section3 .getAge input:hover+.icon {
+				animation: turnDown 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+				opacity: 1;
+			}
+			
+			.section.section2 .getAge p,
+			.section.section3 .getAge p,
+			.section.section4 p {
+				color: #999;
+				font-size: 0.7rem;
+				padding: 1rem 0.6rem;
+				opacity: 1;
+				position: relative;
+			}
+			
+			.section.section2 .getAge span,
+			.section.section3 .getAge span {
+				display: block;
+				width: 2.5rem;
+				height: 2.5rem;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, .3);
+				text-align: center;
+				line-height: 2.5rem;
+				color: #dadada;
+				font-size: 1.5rem;
+				position: absolute;
+				top: 2.3rem;
+				right: 3rem;
+				transform: rotateZ(90deg);
+				opacity: 0;
+			}
+			
+			.section.section2 .pageText {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				font-size: 1.2rem;
+				bottom: 3rem;
+				left: 50%;
+				margin-left: -50%;
+				line-height: 1.5em;
+				color: #223
+			}
+			
+			.section.section3 .beginPath {
+				position: absolute;
+				bottom: 2rem;
+				left: 50%;
+				margin-left: -4.5rem;
+				background: rgb(61, 79, 178);
+			}
+			
+
+			.section:nth-child(n+4) {
+				background: #ddd;
+			}
+			
+			.section:nth-child(n+4) .lifeBox {
+				border: 10px solid rgb(63, 79, 178);
+				width: 90%;
+				margin: 0 auto;
+				box-shadow: 5px 0px 20px #555;
+			}
+			
+			.section:nth-child(n+4) table {
+				width: 100%;
+				height: 60vh;
+			}
+			
+			.section:nth-child(n+4) table tr td {
+				border: 2px solid #ddd;
+				background: #fff;
+
+			}
+			
+			.section:nth-child(n+4) p {
+				color: #223;
+				font-size: 0.95rem;
+				text-align: center;
+				line-height: 2rem;
+				padding: 0;
+			}
+			
+			.section:nth-child(n+4) p:first-child {
+				padding-top: 1rem;
+			}
+			
+			.section:nth-child(n+4) p:last-of-type {
+				padding-bottom: 1rem;
+			}
+			
+			.section:nth-child(n+4) a {
+				background: rgba(63, 79, 178, .8);
+			}
+			.section3 .shadow {
+				position: absolute;
+				background: rgb(63, 79, 178);
+				top: 0rem;
+				width: 100%;
+				height: 100vh;
+				box-shadow:-2px 2px 10px 0 rgba(0,0,0,0.5),
+				2px -2px 10px 0 rgba(255,255,255,0.5);
+				display: none;
+			}
+			.section3 .shadow p{
+				color: #fff;
+				font-size: 1.5rem;
+				text-align: center;
+				margin-top: 30vh
+			}
+			.loader {
+				margin: 20vh auto;
+			    background: -webkit-linear-gradient(left, skyblue 50%, #fafafa 50%); /* Foreground color, Background colour */
+			    border-radius: 100%;
+			    height: 100px; /* Height and width */
+			    width: 100px; /* Height and width */
+			    animation: time 8s steps(500, start) infinite;
+			}
+			.mask {
+			    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+			    height: 100%;
+			    left: 0;
+			    position: absolute;
+			    top: 0;
+			    width: 50%;
+			    animation: mask 2s steps(250, start) infinite;
+			    transform-origin: 100% 50%;
+			}
+			
