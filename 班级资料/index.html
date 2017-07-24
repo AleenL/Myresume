@@ -3,9 +3,11 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>班级资料</title>
+		<script src='js/jquery-1.8.3.min.js'></script>
+		<link rel="stylesheet" href="css/classFile.css" />
 		<style>
-		* {
+			* {
 				margin: 0;
 				padding: 0;
 				box-sizing: border-box;
@@ -25,200 +27,6 @@
 				text-decoration: none;
 			}
 			
-			.flexBetween {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
-			
-			.flexCenter {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-			
-			.yourData {
-				width: 1200px;
-				background: #fff;
-				margin: 0 auto
-			}
-			
-			.yourData .layout {
-				width: 95%;
-				margin: 30px auto;
-			}
-			
-			.yourData .flieItems div input {
-				width: 230px;
-				height: 30px;
-				border: none;
-				background: rgb(236, 236, 236);
-				outline: none;
-				padding-left: 20px;
-			}
-			
-			.yourData .flieItems div ul {
-				margin: 20px 0;
-			}
-			
-			.yourData .flieItems div ul li {
-				border: 1px solid #ccc;
-				padding: 8px 15px;
-			}
-			
-			.yourData .flieItems div:nth-child(3) ul li:first-child {
-				border: none;
-				padding: 8px 0
-			}
-			
-			.yourData .flieItems div:nth-child(3) ul li:first-child a,
-			.yourData .centerContent .crumbList p {
-				color: rgb(32, 108, 250);
-			}
-			
-			.yourData .flieItems div:nth-child(3) {
-				width: 270px;
-			}
-			
-			.yourData .flieItems div:nth-child(2) {
-				width: 220px
-			}
-			
-			.yourData .flieItems div:nth-child(1) {
-				width: 570px
-			}
-			
-			.yourData .flieItems div:nth-child(3) ul li:nth-child(n+2) {
-				background: rgb(32, 108, 250);
-				border-radius: 5px;
-				color: #fff;
-			}
-			
-			.yourData .centerContent {
-				margin-bottom: 20px;
-			}
-			
-			.yourData .centerContent .crumbList p {
-				display: inline-block;
-				margin-right: -3px;
-			}
-			
-			.yourData .centerContent .crumbList p:last-child {
-				color: black
-			}
-			
-			.yourData .centerContent .crumbList p:last-child span {
-				display: none;
-			}
-			
-			.yourData .centerContent .prgrossList {
-				width: 225px;
-				font-size: 14px;
-				color: #aaa
-			}
-			
-			.yourData .centerContent .prgrossList .progressBar {
-				width: 100px;
-				height: 10px;
-				background: rgb(236, 236, 236);
-			}
-			
-			.yourData .centerContent .prgrossList .progressBar .prgrossValue {
-				width: 30%;
-				height: 10px;
-				background: rgb(32, 108, 250);
-			}
-			
-			.yourData .footerContent {
-				align-items: flex-start;
-			}
-			
-			.yourData .footerContent .aslideLeft {
-				width: 120px;
-				height: 680px;
-				background: rgb(247, 247, 247);
-			}
-			
-			.yourData .footerContent .aslideLeft ul {
-				margin-top: 10px;
-			}
-			
-			.yourData .footerContent .aslideLeft ul li {
-				text-align: center;
-				height: 40px;
-				font-size: 14px;
-				line-height: 40px;
-			}
-			
-			.yourData .footerContent .aslideRight {
-				width: 1020px;
-			}
-			
-			.yourData .footerContent .aslideRight ul li {
-				height: 45px;
-				width: inherit;
-
-				border-bottom: 1px solid rgb(247, 247, 247);
-				font-size: 14px;
-			}
-			
-			.yourData .footerContent .aslideRight ul li:first-child {
-				background: rgb(236, 236, 236);
-				border: none;
-				font-size: 12px;
-				color: rgb(144, 144, 144)
-			}
-			
-			.yourData .footerContent .aslideRight ul li div:first-child{
-				width: 620px;
-				line-height: 45px;
-				height: 45px;
-				position: relative;
-			}
-			.yourData .footerContent .aslideRight ul li p{
-				
-				width: 200px;
-			}
-			.squaredThree {
-  				width: 650px;
-  				position: relative;
-			}
-
-			.squaredThree span{
-				margin-left: 40px
-			}
-			.squaredThree label {
- 				width: 20px;
-  				height: 20px;
-  				cursor: pointer;
-  				position: absolute;
-  				top: 50%;
-  				margin-top: -10px;
-  				left: 20px;
-  				background: #fff;
-  				border-radius: 5px;
-  				border: 1px solid #ccc;
-			}
-			.squaredThree label:after {
-  				content: '';
-  				width: 9px;
-  				height: 5px;
-  				position: absolute;
-  				top: 3px;
-  				left: 3px;
-  				border: 3px solid #233;
-  				border-top: none;
-  				border-right: none;
-  				background: transparent;
-  				opacity: 0;
-  				transform: rotate(-45deg);
-			}
-			.squaredThree input[type=checkbox] {
-				visibility: hidden;
-			}
-			.squaredThree input[type=checkbox]:checked + label:after {
-  				opacity: 1;
-			}
 
 		</style>
 	</head>
@@ -279,12 +87,116 @@
 						<ul>
 							<li class='flexBetween'>
 								<div class="squaredThree">
-    								<input type="checkbox" value="None" id="squaredThree" name="check" checked />
-      								<label for="squaredThree"></label>
-      								<span>文件名</span>
-   								</div>
-   								<p>大小/时长</p>
-   								<p>修改时间</p>
+									<input type="checkbox" value="None" id="squaredThree" name="check" checked />
+									<label for="squaredThree"></label>
+									<span>文件名</span>
+								</div>
+								<div class='iconItems'>
+
+								</div>
+								<p>大小/时长</p>
+								<p>修改时间</p>
+							</li>
+							<li class='flexBetween'>
+								<div class="squaredThree">
+									<input type="checkbox" value="None" id="squaredThree" name="check" checked />
+									<label for="squaredThree"></label>
+									<span><i class='icon icon-wenjian'>文件名</i></span>
+									<span>人力资源管理师3级</span>
+								</div>
+								<div class='iconItems'>
+									<div class='iconList flexCenter'>
+										<span><i class='icon icon-share'>享</i></span>
+										<span><i class='icon icon-download'>下</i></span>
+										<span><i class='icon icon-more'>更多</i></span>
+										<div class='getMore'>
+											<p>移动</p>
+											<p>删除</p>
+											<div class='topSquare'>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<p>大小/时长</p>
+								<p>修改时间</p>
+							</li>
+							<li class='flexBetween'>
+								<div class="squaredThree">
+									<input type="checkbox" value="None" id="squaredThree" name="check" checked />
+									<label for="squaredThree"></label>
+									<span><i class='icon icon-wenjian'>文件名</i></span>
+									<span>人力资源管理图片事例.ppt</span>
+								</div>
+								<div class='iconItems'>
+									<div class='iconList flexCenter'>
+										<span><i class='icon icon-share'>享</i></span>
+										<span><i class='icon icon-download'>下</i></span>
+										<span><i class='icon icon-more'>更多</i></span>
+										<div class='getMore'>
+											<p>移动</p>
+											<p>删除</p>
+											<div class='topSquare'>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='prgrossList'>
+									<div class='progressBar'>
+										<div class='prgrossValue'>
+										</div>
+									</div>
+								</div>
+								<p>-</p>
+							</li>
+							<li class='flexBetween'>
+								<div class="squaredThree">
+									<input type="checkbox" value="None" id="squaredThree" name="check" checked />
+									<label for="squaredThree"></label>
+									<span><i class='icon icon-wenjian'>文件名</i></span>
+									<span>人力资源教案.pdf</span>
+								</div>
+								<div class='iconItems'>
+									<div class='iconList flexCenter'>
+										<span><i class='icon icon-share'>享</i></span>
+										<span><i class='icon icon-download'>下</i></span>
+										<span><i class='icon icon-more'>更多</i></span>
+										<div class='getMore'>
+											<p>移动</p>
+											<p>删除</p>
+											<div class='topSquare'>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<p>1M</p>
+								<p>5分钟</p>
+							</li>
+							<li class='flexBetween'>
+								<div class="squaredThree">
+									<input type="checkbox" value="None" id="squaredThree" name="check" checked />
+									<label for="squaredThree"></label>
+									<span><i class='icon icon-wenjian'>文件名</i></span>
+									<span>示例图片.jpg</span>
+								</div>
+								<div class='iconItems'>
+									<div class='iconList flexCenter'>
+										<span><i class='icon icon-share'>享</i></span>
+										<span><i class='icon icon-download'>下</i></span>
+										<span><i class='icon icon-more'>更多</i></span>
+										<div class='getMore'>
+											<p>移动</p>
+											<p>删除</p>
+											<div class='topSquare'>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<p>2.6M</p>
+								<p>10分钟</p>
 							</li>
 						</ul>
 					</div>
@@ -292,6 +204,32 @@
 			</div>
 		</div>
 		</div>
+		<script>
+			var getMoreBox = $('.getMore'),
+				getMoreBtn = $('.icon-more'),
+				iconBox = $('.iconList')
+				
+			getMoreBox.on('mouseleave',function(){
+				$(this).fadeOut()
+			})
+			getMoreBtn.on('mouseenter',function(){
+				const index = getMoreBtn.index(this)
+				getMoreBox.eq(index).fadeIn()
+				getMoreBox.eq(index).on('click',function(e){
+					if(e.target.nodeName = "P"){
+						$(this).fadeOut()
+					}
+				})
+			})
+			
+			$(document).on('mousemove',function(){
+				for(let i=0;i<iconBox.length;i++){
+					if(iconBox.eq(i).css('display')=='none'){
+						iconBox.eq(i).find('.getMore').fadeOut()
+					}
+				}
+			})
+		</script>
 	</body>
 
 </html>

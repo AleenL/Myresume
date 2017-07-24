@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			@font-face {
+				font-family: 'iconfont';
+				/* project id 299445 */
+				src: url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.eot');
+				src: url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.eot?#iefix') format('embedded-opentype'), url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.woff') format('woff'), url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.ttf') format('truetype'), url('https://at.alicdn.com/t/font_mclt2hf4iabmaemi.svg#iconfont') format('svg');
+			}
+			
+			.iconfont {
+				font-family: iconfont !important;
+				font-style: normal;
+			}
+			
+			body {
+				background: #fff;
+				color: #333;
+				font-size: 12px;
+				font-family: "微软雅黑", "Arial Narrow";
+			}
+			
+			a {
+				color: #2d374b;
+				text-decoration: none
+			}
+			
+			em {
+				font-style: normal
+			}
+			
+			li {
+				list-style: none
+			}
+			
+			img {
+				border: 0;
+				vertical-align: middle
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			p {
+				word-wrap: break-word
+			}
+			
+			.section.section1 {
+				background: rgb(61, 79, 178);
+			}
+			
+			.section.section2 {
+				background: rgb(61, 79, 178);
+				background-image: url(img/yourselfAge.png);
+				background-blend-mode: lighten;
+				background-size: cover;
+				background-position: center;
+			}
+			
+			.section.section3 {
+				background: rgb(61, 79, 178);
+				background-image: url(img/getAge.jpg);
+				background-blend-mode: lighten;
+				background-size: cover;
+				background-position: center;
+			}
+			
+			.section.section1 img {
+				width: 100%;
+			}
+			
+			.section.section1 h2 {
+				margin: 0 auto;
+				width: 80%;
+				text-align: center;
+				color: #fff;
+				font-size: 1.2rem;
+				font-weight: 200;
+			}
+			
+			.section.section1 p {
+				padding: 1rem 0;
+				font-size: 0.7rem;
+				width: 90%;
+				color: #fff;
+				text-align: right;
+				font-weight: 200;
+			}
+			
+			.interBtn {
+				display: block;
+				color: #fff;
+				width: 9rem;
+				height: 3rem;
+				font-size: 1.5rem;
+				line-height: 3rem;
+				text-align: center;
+				background: rgba(24, 255, 133, .6);
+				border-radius: 5px;
+				margin: 5rem auto;
+				box-shadow: 0 0 30px #888;
+			}
+			
+			.text-focus-in {
+				-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+				animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+			}
+			
+			@-webkit-keyframes text-focus-in {
+				0% {
+					-webkit-filter: blur(12px);
+					filter: blur(12px);
+					opacity: 0;
+				}
+				100% {
+					-webkit-filter: blur(0px);
+					filter: blur(0px);
+					opacity: 1;
+				}
+			}
+			
+			@keyframes text-focus-in {
+				0% {
+					-webkit-filter: blur(12px);
+					filter: blur(12px);
+					opacity: 0;
+				}
+				100% {
+					-webkit-filter: blur(0px);
+					filter: blur(0px);
+					opacity: 1;
+				}
+			}
+			
+			.section {
+				position: relative;
+			}
+			
+			.section.section2 .getAge,
+			.section.section3 .getAge {
+				width: 80%;
+				margin: 0 auto;
+			}
+			
+			.section.section2 .getAge input,
+			.section.section3 .getAge input {
+				margin-top: 2rem;
+				width: 100%;
+				height: 3rem;
+				text-indent: 1rem;
+				outline: none;
+				border-radius: 5px;
+				border: none;
+				font-size: 1rem;
+			}
+			
+			.section.section2 .getAge input:hover+.icon,
+			.section.section3 .getAge input:hover+.icon {
+				animation: turnDown 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+				opacity: 1;
+			}
+			
+			.section.section2 .getAge p,
+			.section.section3 .getAge p,
+			.section.section4 p {
+				color: #999;
+				font-size: 0.7rem;
+				padding: 1rem 0.6rem;
+				opacity: 1;
+				position: relative;
+			}
+			
+			.section.section2 .getAge span,
+			.section.section3 .getAge span {
+				display: block;
+				width: 2.5rem;
+				height: 2.5rem;
+				border-radius: 50%;
+				background: rgba(0, 0, 0, .3);
+				text-align: center;
+				line-height: 2.5rem;
+				color: #dadada;
+				font-size: 1.5rem;
+				position: absolute;
+				top: 2.3rem;
+				right: 3rem;
+				transform: rotateZ(90deg);
+				opacity: 0;
+			}
+			
+			.section.section2 .pageText {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				font-size: 1.2rem;
+				bottom: 3rem;
+				left: 50%;
+				margin-left: -50%;
+				line-height: 1.5em;
+				color: #223
+			}
+			
+			.section.section3 .beginPath {
+				position: absolute;
+				bottom: -2rem;
+				left: 50%;
+				margin-left: -4.5rem;
+				background: rgb(61, 79, 178);
+			}
+			
+			.flip-in-hor-bottom {
+				-webkit-animation: flip-in-hor-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+				animation: flip-in-hor-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			}
+			
+			@-webkit-keyframes flip-in-hor-bottom {
+				0% {
+					-webkit-transform: rotateX(80deg);
+					transform: rotateX(80deg);
+					opacity: 0;
+				}
+				100% {
+					-webkit-transform: rotateX(0);
+					transform: rotateX(0);
+					opacity: 1;
+				}
+			}
+			
+			@keyframes flip-in-hor-bottom {
+				0% {
+					-webkit-transform: rotateX(80deg);
+					transform: rotateX(80deg);
+					opacity: 0;
+				}
+				100% {
+					-webkit-transform: rotateX(0);
+					transform: rotateX(0);
+					opacity: 1;
+				}
+			}
+			
+			@-webkit-keyframes turnDown {
+				0% {
+					-webkit-transform: rotateZ(0);
+					transform: rotateZ(0);
+					opacity: 0;
+				}
+				100% {
+					-webkit-transform: rotateZ(90deg);
+					transform: rotateZ(90deg);
+					opacity: 1;
+				}
+			}
+			
+			@keyframes turnDown {
+				0% {
+					-webkit-transform: rotateZ(0);
+					transform: rotateZ(0);
+					opacity: 0;
+				}
+				100% {
+					-webkit-transform: rotateZ(90deg);
+					transform: rotateZ(90deg);
+					opacity: 1;
+				}
+			}
+			
+			.section:nth-child(n+4) {
+				background: #ddd;
+			}
+			
+			.section:nth-child(n+4) .lifeBox {
+				border: 10px solid rgb(63, 79, 178);
+				width: 90%;
+				height: 60vh;
+				margin: 0 auto;
+				box-shadow: 5px 0px 20px #555;
+			}
+			
+			.section:nth-child(n+4) table {
+				width: 100%;
+				height: 60vh;
+			}
+			
+			.section:nth-child(n+4) table tr td {
+				border: 2px solid #ddd;
+				background: #fff;
+			}
+			
+			.section:nth-child(n+4) p {
+				color: #223;
+				font-size: 0.95rem;
+				text-align: center;
+				line-height: 2rem;
+				padding: 0;
+			}
+			
+			.section:nth-child(n+4) p:first-child {
+				padding-top: 2rem;
+			}
+			
+			.section:nth-child(n+4) p:nth-child(2) {
+				padding-bottom: 2rem;
+			}
+			
+			.section:nth-child(n+4) a {
+				background: rgba(63, 79, 178, .8);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id='yourLeft'>
+			<div class='section section1'>
+				<div><img src="img/home.png" alt="" /></div>
+				<h2 class='text-focus-in'>Nothing can resist the eating of all the time </h2>
+				<p class='text-focus-in'>——Rabindranath Tagore</p>
+				<a href="#page2" class='interBtn'>你的旅程</a>
+			</div>
+			<div class='section section2'>
+				<div class='getAge'>
+					<input type="text" placeholder="请输入你的年龄" />
+					<span class='icon'><a href="javascript:;"><i class='iconfont'>&#xe611;</i></a></span>
+					<p>输入数字即可</p>
+				</div>
+				<p class='pageText'>
+					STAY GOLD
+				</p>
+			</div>
+			<div class='section section3'>
+				<div class='getAge'>
+					<input type="text" placeholder="请输入父母的平均年龄" />
+					<p>输入数字即可</p>
+				</div>
+				<a href="" class='interBtn beginPath'>开始计算</a>
+			</div>
+			<div class='section section4'>
+				<p>
+					人的一生，平均只有75岁的寿命，大概有900个月
+				</p>
+				<p>你现在<span></span>岁，在表格里，是这样的</p>
+				<div class='lifeBox'>
+					<table>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+				<a href="#page5" class='interBtn nextPath'>下一页</a>
+			</div>
+			<div class='section section5'>
+				<p>
+					如果我们每天睡觉需要8个小时
+				</p>
+				<p>我们真正拥有的时间</p>
+				<div class='lifeBox'>
+					<table>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+				<a href="#page6" class='interBtn nextPath'>下一页</a>
+			</div>
+			<div class='section section6'>
+				<p>
+					你的父母平均年龄<span></span>岁
+				</p>
+				<p>如果你每天能陪着他们，那么你们相处的日子还有这么多</p>
+				<div class='lifeBox'>
+					<table>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+				<a href="#page7" class='interBtn nextPath'>下一页</a>
+			</div>
+			<div class='section section7'>
+				<p>
+					如果你每月陪他们两天
+				</p>
+				<p>那么你们相处的日子还有这么多</p>
+				<div class='lifeBox'>
+					<table>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+				<a href="#page8" class='interBtn nextPath'>下一页</a>
+			</div>
+			<div class='section section8'>
+				<p>
+					如果你每年陪他们两天
+				</p>
+				<p>那么你们相处的日子还有这么多</p>
+				<div class='lifeBox'>
+					<table>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+				<a href="#page2" class='interBtn nextPath'>重新计算</a>
+			</div>
+			<div class='section section9'>
+				8
+			</div>
+			<div class='section section10'>
+				9
+			</div>
+		</div>
+
+		<script>
+			$('#yourLeft').fullpage({
+				scrollingSpeed: 800,
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
+				afterRender: function() {
+					$.fn.fullpage.setAllowScrolling(false);
+					var leftBox = $('.lifeBox'),
+						newTr = $('<tr></tr>'),
+						newTd = ''
+					for(let i = 0; i < 30; i++) {
+						newTd += '<td></td>'
+					}
+					newTr.html(newTd)
+					console.log(leftBox.find())
+					leftBox.eq(0).find('table').append(newTr)
+					for(let i = 0; i < leftBox.length; i++) {
+						for(let j = 0; j < 30; j++) {
+							leftBox.eq(i).find('table').append(newTr)
+						}
+					}
+
+				}
+			})
+		</script>
+	</body>
+
+</html>

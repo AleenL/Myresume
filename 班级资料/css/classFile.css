@@ -1,0 +1,302 @@
+			.flexBetween {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			.flexCenter {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.flexRound {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+			}
+			
+			.yourData {
+				width: 1200px;
+				background: #fff;
+				margin: 0 auto
+			}
+			
+			.yourData .layout {
+				width: 95%;
+				margin: 30px auto;
+			}
+			
+			.yourData .flieItems div input {
+				width: 230px;
+				height: 30px;
+				border: none;
+				background: rgb(236, 236, 236);
+				outline: none;
+				padding-left: 20px;
+			}
+			
+			.yourData .flieItems div ul {
+				margin: 20px 0;
+			}
+			
+			.yourData .flieItems div ul li {
+				border: 1px solid #ccc;
+				padding: 8px 15px;
+			}
+			
+			.yourData .flieItems div:nth-child(3) ul li:first-child {
+				border: none;
+				padding: 8px 0
+			}
+			
+			.yourData .flieItems div:nth-child(3) ul li:first-child a,
+			.yourData .centerContent .crumbList p {
+				color: rgb(32, 108, 250);
+			}
+			
+			.yourData .flieItems div:nth-child(3) {
+				width: 270px;
+			}
+			
+			.yourData .flieItems div:nth-child(2) {
+				width: 220px
+			}
+			
+			.yourData .flieItems div:nth-child(1) {
+				width: 570px
+			}
+			
+			.yourData .flieItems div:nth-child(3) ul li:nth-child(n+2) {
+				background: rgb(32, 108, 250);
+				border-radius: 5px;
+				color: #fff;
+			}
+			
+			.yourData .centerContent {
+				margin-bottom: 20px;
+			}
+			
+			.yourData .centerContent .crumbList p {
+				display: inline-block;
+				margin-right: -3px;
+			}
+			
+			.yourData .centerContent .crumbList p:last-child {
+				color: black
+			}
+			
+			.yourData .centerContent .crumbList p:last-child span {
+				display: none;
+			}
+			
+			.yourData .centerContent .prgrossList {
+				width: 225px;
+				font-size: 14px;
+				color: #aaa
+			}
+			
+			.yourData .centerContent .prgrossList .progressBar {
+				width: 100px;
+				height: 10px;
+				background: rgb(236, 236, 236);
+			}
+			
+			.yourData .centerContent .prgrossList .progressBar .prgrossValue {
+				width: 30%;
+				height: 10px;
+				background: rgb(32, 108, 250);
+			}
+			
+			.yourData .footerContent {
+				align-items: flex-start;
+			}
+			
+			.yourData .footerContent .aslideLeft {
+				width: 120px;
+				height: 680px;
+				background: rgb(247, 247, 247);
+			}
+			
+			
+			.yourData .footerContent .aslideLeft ul li {
+				text-align: center;
+				height: 45px;
+				font-size: 14px;
+				line-height: 45px;
+			}
+			
+			.yourData .footerContent .aslideRight {
+				width: 1020px;
+			}
+			
+			.yourData .footerContent .aslideRight ul li {
+				height: 45px;
+				width: inherit;
+				border-bottom: 1px solid rgb(247, 247, 247);
+				font-size: 14px;
+				justify-content: flex-start;
+			}
+			
+			.yourData .footerContent .aslideRight ul li:hover {
+				background: rgb(251, 248, 244);
+			}
+			
+			.yourData .footerContent .aslideRight ul li:hover>.iconItems .iconList {
+				display: inline-block;
+				
+			}
+			
+			.yourData .footerContent .aslideRight ul li:first-child {
+				background: rgb(236, 236, 236);
+				border: none;
+				font-size: 12px;
+				color: rgb(144, 144, 144)
+			}
+			
+			.yourData .footerContent .aslideRight ul li>div:first-child {
+				width: 430px;
+				line-height: 45px;
+				height: 45px;
+				position: relative;
+			}
+			
+			.yourData .footerContent .aslideRight ul li .iconItems {
+				width: 200px;
+			}
+			
+			.yourData .footerContent .aslideRight ul li .iconItems span {	
+				padding: 0px 18px;
+				cursor: pointer;
+				display: inline-block;
+			}
+			
+			
+			.yourData .footerContent .aslideRight ul li .iconItems .iconList {
+				position: relative;
+				display: none;
+			}
+			
+			.yourData .footerContent .aslideRight ul li .iconItems .iconList .getMore {
+				position: absolute;
+				background: rgb(255,255,255);
+				width: 70px;
+				height: 77px;
+				border: 1px solid rgb(228, 228, 228);
+				top: 31px;
+				left: 100px;
+				box-shadow: 0 0 20px #dfdfdf;
+				display: none;
+			}
+			
+			.yourData .footerContent .aslideRight ul li .iconItems .iconList .getMore p:first-child{
+				margin-top: 7px;
+			}
+			
+			.yourData .footerContent .aslideRight ul li .iconItems .iconList .getMore p{
+				width:70px;
+				padding:6px 0;
+				text-align: center;
+				color:#000;
+				cursor: pointer;
+			}
+			
+			.yourData .footerContent .aslideRight ul li .iconItems .iconList .getMore p:hover{
+				color:rgb(32, 108, 250)
+			}
+			
+			.yourData .footerContent .aslideRight ul li .iconItems .iconList .getMore .topSquare {
+				position: absolute;
+				top:-8px;
+				margin-left: 27px;
+				width: 0;
+				height: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-bottom: 8px solid rgb(228, 228, 228);
+				box-shadow: 0 0 20px #dfdfdf;
+				z-index: 3;
+			}
+			.yourData .footerContent .aslideRight ul li .iconItems .iconList .getMore .topSquare::after {
+				content: "";
+				display: block;
+				clear: both;
+				position: absolute;
+				margin-left: -6px;
+				top:1px;
+				width: 0;
+				height: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-bottom: 8px solid rgb(255,255,255);
+				z-index: 99;
+			}
+			
+			.yourData .footerContent .aslideRight ul li p {
+				font-size: 12px;
+				width: 200px;
+				color: rgb(144, 144, 144)
+			}
+			
+			.squaredThree {
+				width: 430px;
+				position: relative;
+			}
+			
+			.squaredThree span {
+				margin-left: 40px
+			}
+			
+			.squaredThree label {
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				margin-top: -10px;
+				left: 20px;
+				background: #fff;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+			}
+			
+			.squaredThree label:after {
+				content: '';
+				width: 9px;
+				height: 5px;
+				position: absolute;
+				top: 3px;
+				left: 3px;
+				border: 3px solid #233;
+				border-top: none;
+				border-right: none;
+				background: transparent;
+				opacity: 0;
+				transform: rotate(-45deg);
+			}
+			
+			.squaredThree input[type=checkbox] {
+				visibility: hidden;
+			}
+			
+			.squaredThree input[type=checkbox]:checked+label:after {
+				opacity: 1;
+			}
+			
+			.yourData .footerContent .prgrossList {
+				width: 200px
+			}
+			
+			.yourData .footerContent .progressBar {
+				width: 100px;
+				height: 8px;
+				background: rgb(198, 198, 198);
+				border-radius: 5px;
+			}
+			
+			.yourData .footerContent .progressBar .prgrossValue {
+				border-radius: 5px;
+				width: 30%;
+				height: 8px;
+				background: rgb(32, 108, 250);
+			}

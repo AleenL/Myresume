@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/jquery.fullPage.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			body {
+				background: #fff;
+				color: #333;
+				font-size: 12px;
+				font-family: "微软雅黑", "Arial Narrow";
+			}
+			
+			a {
+				color: #2d374b;
+				text-decoration: none
+			}
+			
+			em {
+				font-style: normal
+			}
+			
+			li {
+				list-style: none
+			}
+			
+			img {
+				border: 0;
+				vertical-align: middle
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			p {
+				word-wrap: break-word
+			}
+			
+			.section.section1 {
+				background: rgb(61, 79, 178);
+			}
+			.section.section2 {
+				background: url(img/yourname.png) no-repeat;
+				background-size: 65%;
+				background-color:rgb(15, 29, 78);
+				//background-blend-mode: lighten;
+
+				background-position: center;
+			}
+			.section.section3 {
+				background: url(img/yourParent.png) no-repeat;
+				background-size: 60%;
+				background-color:rgb(50,50,100);
+				//background-blend-mode: lighten;
+				background-position: center;
+			}
+			.section.section1 img {
+				width: 100%;
+			}
+			
+			.section.section1 h2 {
+				margin: 0 auto;
+				width: 80%;
+				text-align: center;
+				color: #fff;
+				font-size: 1.2rem;
+				font-weight: 200;
+			}
+			
+			.section.section1 p {
+				padding: 1rem 0;
+				font-size: 0.7rem;
+				width: 90%;
+				color: #fff;
+				text-align: right;
+				font-weight: 200;
+			}
+			
+			.interBtn {
+				display: block;
+				color: #fff;
+				width: 9rem;
+				height: 3rem;
+				font-size: 1.5rem;
+				line-height: 3rem;
+				text-align: center;
+				background: rgba(24, 255, 133, .6);
+				border-radius: 5px;
+				margin: 5rem auto;
+				box-shadow: 0 0 30px #888;
+			}
+			
+			.text-focus-in {
+				-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+				animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+			}
+			
+			@-webkit-keyframes text-focus-in {
+				0% {
+					-webkit-filter: blur(12px);
+					filter: blur(12px);
+					opacity: 0;
+				}
+				100% {
+					-webkit-filter: blur(0px);
+					filter: blur(0px);
+					opacity: 1;
+				}
+			}
+			
+			@keyframes text-focus-in {
+				0% {
+					-webkit-filter: blur(12px);
+					filter: blur(12px);
+					opacity: 0;
+				}
+				100% {
+					-webkit-filter: blur(0px);
+					filter: blur(0px);
+					opacity: 1;
+				}
+			}
+			.section{
+				position: relative;
+				
+			}
+			.section.section2 .getAge,.section.section3 .getParentAge{
+				width: 80%;
+				margin: 0 auto;
+
+			}
+			.section.section2 .getAge input,.section.section3 .getParentAge input{
+				margin-top:2rem;
+				width:100%;
+				height:3rem;
+				text-indent: 1rem;
+				outline: none;
+				border-radius: 5px;
+				border: none;
+				font-size: 1rem;
+			}
+			.section.section2 .getAge p,.section.section3 .getParentAge p{
+				color:#999;
+				font-size: 0.7rem;
+				padding: 1rem 0.6rem;
+			}
+			.section.section2 .getAgeBtn,.section.section3 .getParentBtn{
+				position: absolute;
+				bottom:0;
+				left:50%;
+				margin-left:-4.5rem;
+				margin-bottom: 2rem;
+			}
+			.section.section2 .pageText,.section.section3 .pageText {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				font-size: 1.2rem;
+				bottom: 3rem;
+				left: 50%;
+				margin-left: -50%;
+				line-height: 1.5em;
+				color: #f0f0f0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id='yourLeft'>
+			<div class='section section1'>
+				<div><img src="img/home.png" alt="" /></div>
+				<h2 class='text-focus-in'>Nothing can resist the eating of all the time </h2>
+				<p class='text-focus-in'>——Rabindranath Tagore</p>
+				<a href="" class='interBtn'>你的旅程</a>
+			</div>
+			<div class='section section2'>
+				<div class='getAge'>
+					<input type="text" placeholder="请输入你的年龄"/>
+					<p>输入数字即可</p>
+				</div>
+				<p class='pageText'>
+					STAY GOLD
+				</p>
+			</div>
+			<div class='section section3'>
+				<div class='getParentAge'>
+					<input type="text" placeholder="请输入父母的平均年龄"/>
+					<p>输入数字即可</p>
+				</div>
+				<p class='pageText'>
+					No More Trustworthy Than Mother
+				</p>
+			</div>
+			<div class='section section4'>
+				4
+			</div>
+			<div class='section section5'>
+				5
+			</div>
+			<div class='section section6'>
+				6
+			</div>
+			<div class='section section7'>
+				7
+			</div>
+			<div class='section section8'>
+				8
+			</div>
+			<div class='section section9'>
+				9
+			</div>
+		</div>
+
+		<script>
+			$('#yourLeft').fullpage({
+				scrollingSpeed: 800,
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8']
+			})
+		</script>
+	</body>
+
+</html>
