@@ -114,7 +114,7 @@
 				text-align: center;
 				background: rgba(24, 255, 133, .6);
 				border-radius: 5px;
-				margin: 5rem auto;
+				margin: 3rem auto;
 				box-shadow: 0 0 30px #888;
 			}
 			
@@ -289,7 +289,6 @@
 			.section:nth-child(n+4) .lifeBox {
 				border: 10px solid rgb(63, 79, 178);
 				width: 90%;
-				height: 60vh;
 				margin: 0 auto;
 				box-shadow: 5px 0px 20px #555;
 			}
@@ -302,6 +301,7 @@
 			.section:nth-child(n+4) table tr td {
 				border: 2px solid #ddd;
 				background: #fff;
+
 			}
 			
 			.section:nth-child(n+4) p {
@@ -316,44 +316,198 @@
 				padding-top: 2rem;
 			}
 			
-			.section:nth-child(n+4) p:nth-child(2) {
+			.section:nth-child(n+4) p:last-of-type {
 				padding-bottom: 2rem;
 			}
 			
 			.section:nth-child(n+4) a {
 				background: rgba(63, 79, 178, .8);
 			}
+			.section3 .shadow {
+				position: absolute;
+				background: rgb(63, 79, 178);
+				top: 0rem;
+				width: 100%;
+				height: 100vh;
+				box-shadow:-2px 2px 10px 0 rgba(0,0,0,0.5),
+				2px -2px 10px 0 rgba(255,255,255,0.5);
+				display: none;
+			}
+			.section3 .shadow p{
+				color: #fff;
+				font-size: 1.5rem;
+				text-align: center;
+				margin-top: 30vh
+			}
+			.loader {
+				margin: 20vh auto;
+			    background: -webkit-linear-gradient(left, skyblue 50%, #fafafa 50%); /* Foreground color, Background colour */
+			    border-radius: 100%;
+			    height: 100px; /* Height and width */
+			    width: 100px; /* Height and width */
+			    animation: time 8s steps(500, start) infinite;
+			}
+			.mask {
+			    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+			    height: 100%;
+			    left: 0;
+			    position: absolute;
+			    top: 0;
+			    width: 50%;
+			    animation: mask 2s steps(250, start) infinite;
+			    transform-origin: 100% 50%;
+			}
+			.jello-horizontal {
+				-webkit-animation: jello-horizontal 1.2s infinite both;
+				animation: jello-horizontal 1.2s infinite both;
+			}
+			.color-change-2x {
+	-webkit-animation: color-change-2x 2.3s linear alternate both;
+	        animation: color-change-2x 2.3s linear alternate both;
+}
+
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #fff;
+  }
+  100% {
+    background: #1abc9c;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #fff;
+  }
+  100% {
+    background: #1abc9c;
+  }
+}
+
+			@-webkit-keyframes time {
+			    100% { 
+			        transform: rotate(360deg);
+			    }
+			}
+			@-webkit-keyframes mask {
+			    0% {
+			        background: #fafafa; /* Background colour */
+			        transform: rotate(0deg);
+			    }
+			    50% {
+			        background: #fafafa; /* Background colour */
+			        transform: rotate(-180deg);
+			    }
+			    50.01% {
+			        background: skyBlue; /* Foreground colour */
+			        transform: rotate(0deg);
+			    }
+			    100% {
+			        background: skyBlue; /* Foreground colour */
+			        transform: rotate(-180deg);
+			    }
+			}​
+			@-webkit-keyframes jello-horizontal {
+			  0% {
+			    -webkit-transform: scale3d(1, 1, 1);
+			            transform: scale3d(1, 1, 1);
+			  }
+			  30% {
+			    -webkit-transform: scale3d(1.25, 0.75, 1);
+			            transform: scale3d(1.25, 0.75, 1);
+			  }
+			  40% {
+			    -webkit-transform: scale3d(0.75, 1.25, 1);
+			            transform: scale3d(0.75, 1.25, 1);
+			  }
+			  50% {
+			    -webkit-transform: scale3d(1.15, 0.85, 1);
+			            transform: scale3d(1.15, 0.85, 1);
+			  }
+			  65% {
+			    -webkit-transform: scale3d(0.95, 1.05, 1);
+			            transform: scale3d(0.95, 1.05, 1);
+			  }
+			  75% {
+			    -webkit-transform: scale3d(1.05, 0.95, 1);
+			            transform: scale3d(1.05, 0.95, 1);
+			  }
+			  100% {
+			    -webkit-transform: scale3d(1, 1, 1);
+			            transform: scale3d(1, 1, 1);
+			  }
+			}
+			@keyframes jello-horizontal {
+			  0% {
+			    -webkit-transform: scale3d(1, 1, 1);
+			            transform: scale3d(1, 1, 1);
+			  }
+			  30% {
+			    -webkit-transform: scale3d(1.25, 0.75, 1);
+			            transform: scale3d(1.25, 0.75, 1);
+			  }
+			  40% {
+			    -webkit-transform: scale3d(0.75, 1.25, 1);
+			            transform: scale3d(0.75, 1.25, 1);
+			  }
+			  50% {
+			    -webkit-transform: scale3d(1.15, 0.85, 1);
+			            transform: scale3d(1.15, 0.85, 1);
+			  }
+			  65% {
+			    -webkit-transform: scale3d(0.95, 1.05, 1);
+			            transform: scale3d(0.95, 1.05, 1);
+			  }
+			  75% {
+			    -webkit-transform: scale3d(1.05, 0.95, 1);
+			            transform: scale3d(1.05, 0.95, 1);
+			  }
+			  100% {
+			    -webkit-transform: scale3d(1, 1, 1);
+			            transform: scale3d(1, 1, 1);
+			  }
+			}
+
 		</style>
 	</head>
 
 	<body>
 		<div id='yourLeft'>
-			<div class='section section1'>
+			<div class='section bg-pan-top section1'>
 				<div><img src="img/home.png" alt="" /></div>
 				<h2 class='text-focus-in'>Nothing can resist the eating of all the time </h2>
 				<p class='text-focus-in'>——Rabindranath Tagore</p>
 				<a href="#page2" class='interBtn'>你的旅程</a>
 			</div>
 			<div class='section section2'>
-				<div class='getAge'>
+				<div class='getAge getYourAge'>
 					<input type="text" placeholder="请输入你的年龄" />
-					<span class='icon'><a href="javascript:;"><i class='iconfont'>&#xe611;</i></a></span>
-					<p>输入数字即可</p>
+					<span class='icon getYourAgeBtn'><a href="javascript:;"><i class='iconfont'>&#xe611;</i></a></span>
+					<p class='errorMessage'>输入数字即可</p>
 				</div>
 				<p class='pageText'>
 					STAY GOLD
 				</p>
 			</div>
 			<div class='section section3'>
-				<div class='getAge'>
+				<div class='getAge getParentAge'>
 					<input type="text" placeholder="请输入父母的平均年龄" />
-					<p>输入数字即可</p>
+					<p class='errorMessage'>输入数字即可</p>
 				</div>
-				<a href="" class='interBtn beginPath'>开始计算</a>
+				<a href="javascript:;" class='interBtn beginPath'>开始计算</a>
+				<div class="shadow">
+					<p>正在生成你的人生方块...</p>
+					<div class="loader">
+						<div class="mask"></div>
+					</div>​
+				</div>
 			</div>
 			<div class='section section4'>
 				<p>
 					人的一生，平均只有75岁的寿命，大概有900个月
+				</p>
+				<p>
+					人的一生，就在这个30x30的小格子里
 				</p>
 				<p>你现在<span></span>岁，在表格里，是这样的</p>
 				<div class='lifeBox'>
@@ -430,27 +584,96 @@
 		</div>
 
 		<script>
+
+			var getYourAgeBtn = $('.getYourAgeBtn'),
+				satrtPath = $('.beginPath'),
+				getYourAge = $('.getYourAge').find('input'),
+				getParentAge = $('.getParentAge').find('input'),
+				loadPage = $('.shadow')
+				
 			$('#yourLeft').fullpage({
 				scrollingSpeed: 800,
 				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8'],
 				afterRender: function() {
 					$.fn.fullpage.setAllowScrolling(false);
 					var leftBox = $('.lifeBox'),
-						newTr = $('<tr></tr>'),
-						newTd = ''
+						newTr ='<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>',	
+						newArray = []
 					for(let i = 0; i < 30; i++) {
-						newTd += '<td></td>'
+						newArray.push(newTr)
 					}
-					newTr.html(newTd)
-					console.log(leftBox.find())
-					leftBox.eq(0).find('table').append(newTr)
-					for(let i = 0; i < leftBox.length; i++) {
-						for(let j = 0; j < 30; j++) {
-							leftBox.eq(i).find('table').append(newTr)
+					newArray.forEach(function(e){
+						for(let i=0;i<leftBox.length;i++){
+							leftBox.eq(i).find('table').append(e)
+						}
+					})
+					
+				},
+				afterLoad: function(anchorLink, index){
+					function judgeNumber(node){
+						var nodeNume = node.val()
+						newNum = parseInt(nodeNume)
+						if(newNum>0&&newNum<75&&nodeNume.length<=2){
+							node.parent().find('.errorMessage').html('输入数字即可')
+							node.parent().find('.errorMessage').css('color','#999')
+							return true
+						}else{
+							node.parent().find('.errorMessage').html('请输入正确的数值')
+							node.parent().find('.errorMessage').css('color','red')
+							return false
 						}
 					}
+					if(index == 2){
+						getYourAgeBtn.on('click',function(){
+							judgeNumber(getYourAge)
+							$.fn.fullpage.moveTo('page3',0)
+						})
+					}
+					if(index == 3){
+						satrtPath.on('click',function(){
+							judgeNumber(getParentAge)
+							var weAge = parseInt(getParentAge.val())-parseInt(getYourAge.val())
+							if(weAge<10){
+								getParentAge.parent().find('.errorMessage').html('父母的年龄至少比你大10岁吧？')
+								getParentAge.parent().find('.errorMessage').css('color','red')
+								return false
+							}
+							if(!judgeNumber(getParentAge)) return false;
+							loadPage.fadeIn(1000)
+							loadPage.find('p').addClass('jello-horizontal')
+							setTimeout(function(){
+								loadPage.fadeOut(1000)
+								$.fn.fullpage.moveTo('page4',0)
+							},4000)
 
-				}
+						})
+					}
+					if(index == 4){
+						var alltd4 = $('.section4 td'),
+							yourLifeBox = parseInt(getYourAge.val())*12,
+							spanYear = $('.section4 p span')
+
+						spanYear.html(getYourAge.val())
+						for(let i=0;i<(yourLifeBox-1);i++){
+							alltd4.eq(i).addClass('color-change-2x')
+						}
+					}
+					if(index == 5){
+						var alltd5 = $('.section5 td'),
+							yourLifeBox = parseInt(getYourAge.val())*12,
+							yourSupBox = parseInt((900-yourLifeBox)*0.666),
+							numberStart = (900-yourSupBox)
+						for(let i=numberStart;i<(900);i++){
+							alltd5.eq(i).addClass('color-change-2x')
+						}
+					}
+					if(index == 6){
+						var alltd6 = $('.section6 td'),
+							spanYear6 = $('.section6 p span')
+						spanYear.html(getParentAge.val())
+							yourparentBox = parseInt(getYourAge.val())
+					}
+				},
 			})
 		</script>
 	</body>
