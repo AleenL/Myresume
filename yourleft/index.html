@@ -669,9 +669,31 @@
 					}
 					if(index == 6){
 						var alltd6 = $('.section6 td'),
-							spanYear6 = $('.section6 p span')
-						spanYear.html(getParentAge.val())
-							yourparentBox = parseInt(getYourAge.val())
+							spanYear6 = $('.section6 p span'),
+							yourParentBox = parseInt(getParentAge.val())*12
+							spanYear6.html(getParentAge.val())
+						for(let i=yourParentBox;i<900;i++){
+							alltd6.eq(i).addClass('color-change-2x')
+						}
+					}
+					if(index == 7){
+						var	alltd7 = $('.section7 td'),
+							ParentSupMonBox = 900 - parseInt((getParentAge.val()*24)/30)
+						for(let i=ParentSupMonBox;i<900;i++){
+							alltd7.eq(i).addClass('color-change-2x')
+						}
+					}
+					if(index == 8){
+						var	alltd8 = $('.section8 td'),
+						ParentSupDayBox = 900 - parseInt(((76 - parseInt(getYourAge.val()))*2)/30)
+
+						if(ParentSupDayBox<=1){
+							alltd8.eq(899).addClass('color-change-2x')
+						}else{
+							for(let i=ParentSupDayBox;i<900;i++){
+								alltd8.eq(i).addClass('color-change-2x')
+							}
+						}
 					}
 				},
 			})
