@@ -300,23 +300,27 @@
 				top:0;
 				left:0;
 				z-index: 99;
-				background: #1ABC9C;
+				background-image: url(../img/yourname.png);
+				background-color: rgb(38, 18, 42);
+				background-repeat: no-repeat;
+				background-size: 60%;
+				background-position: center
 			}
 			.section.section1 h4{
 				font-size: 1.2rem;
 				text-align: center;
 				padding:2rem 0;
-				color: rgb(63, 79, 178)
+				color: #fff
 			}
 			.section.section1 .spinner {
-				width: 60px;
-				height: 60px;
+				width: 30px;
+				height: 30px;
 				position: absolute;
 				left:50%;
-				top:50%;
-				margin-left:-30px;
+				top:80%;
+				margin-left:-15px;
 				margin-top: -30px;
-				background-color: rgb(63, 79, 178);
+				background-color: rgb(#ccc);
 				-webkit-animation: rotateplane 1.2s infinite ease-in-out;
 				animation: rotateplane 1.2s infinite ease-in-out;
 			}

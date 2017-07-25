@@ -1,16 +1,24 @@
+window.onload = function() {
 
-
-
- window.onload = function(){
- 	
 	var getYourAgeBtn = $('.getYourAgeBtn'),
 		satrtPath = $('.beginPath'),
 		getYourAge = $('.getYourAge').find('input'),
 		getParentAge = $('.getParentAge').find('input'),
 		loadPage = $('.shadow'),
 		loadPage = $('.loadPage')
-		
+
 	loadPage.fadeOut()
+	document.addEventListener('DOMContentLoaded', function() {
+		function audioAutoPlay() {
+			var audio = document.getElementById('bg-music');
+			audio.play();
+			document.addEventListener("WeixinJSBridgeReady", function() {
+				audio.play();
+			}, false);
+		}
+		audioAutoPlay();
+	});
+
 	$('#yourLeft').fullpage({
 		scrollingSpeed: 800,
 		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9'],
@@ -27,18 +35,6 @@
 					leftBox.eq(i).find('table').append(e)
 				}
 			})
-
-			document.addEventListener('DOMContentLoaded', function() {
-				function audioAutoPlay() {
-					var audio = document.getElementById('bg-music');
-					audio.play();
-					document.addEventListener("WeixinJSBridgeReady", function() {
-						audio.play();
-					}, false);
-				}
-				audioAutoPlay();
-			});
-
 		},
 		afterLoad: function(anchorLink, index) {
 			function judgeNumber(node) {
@@ -151,4 +147,4 @@
 			}
 		},
 	})
- }
+}
