@@ -190,12 +190,26 @@
 			.section:nth-child(n+4) {
 				background: #ddd;
 			}
-			
+			.section.section9{
+				background-image: url(../img/yourCity.png);
+				background-color: rgb(38,18,42);
+				background-repeat: no-repeat;
+				background-size: 60%;
+				background-position:center
+			}
 			.section:nth-child(n+4) .lifeBox {
 				border: 10px solid rgb(63, 79, 178);
 				width: 90%;
 				margin: 0 auto;
 				box-shadow: 5px 0px 20px #555;
+			}
+			
+			.section:nth-child(n+4) h4{
+				font-size: 1.3rem;
+				padding:0.4rem 0;
+				font-weight: 200;
+				text-align: center;
+				color:#007AFF
 			}
 			
 			.section:nth-child(n+4) table {
@@ -261,5 +275,14 @@
 			    width: 50%;
 			    animation: mask 2s steps(250, start) infinite;
 			    transform-origin: 100% 50%;
+			}
+			
+			.section.section9 p:first-child{
+				padding-top:2rem;
+			}
+			.section.section9 p{
+				color:#fff;
+				font-size: 1.2rem;
+				line-height: 2rem;
 			}
 			
