@@ -320,7 +320,7 @@
 				top:80%;
 				margin-left:-15px;
 				margin-top: -30px;
-				background-color: rgb(#ccc);
+				background-color: #ccc;
 				-webkit-animation: rotateplane 1.2s infinite ease-in-out;
 				animation: rotateplane 1.2s infinite ease-in-out;
 			}
