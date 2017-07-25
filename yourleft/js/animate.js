@@ -8,16 +8,6 @@ window.onload = function() {
 		loadPage = $('.loadPage')
 
 	loadPage.fadeOut()
-	document.addEventListener('DOMContentLoaded', function() {
-		function audioAutoPlay() {
-			var audio = document.getElementById('bg-music');
-			audio.play();
-			document.addEventListener("WeixinJSBridgeReady", function() {
-				audio.play();
-			}, false);
-		}
-		audioAutoPlay();
-	});
 
 	$('#yourLeft').fullpage({
 		scrollingSpeed: 800,
@@ -35,6 +25,16 @@ window.onload = function() {
 					leftBox.eq(i).find('table').append(e)
 				}
 			})
+			document.addEventListener('DOMContentLoaded', function() {
+				function audioAutoPlay() {
+					var audio = document.getElementById('bg-music');
+					audio.play();
+					document.addEventListener("WeixinJSBridgeReady", function() {
+						audio.play();
+					}, false);
+				}
+				audioAutoPlay();
+			});
 		},
 		afterLoad: function(anchorLink, index) {
 			function judgeNumber(node) {
@@ -53,6 +53,7 @@ window.onload = function() {
 			if(index == 2) {
 				getYourAgeBtn.on('click', function() {
 					judgeNumber(getYourAge)
+					if(!judgeNumber(geYourAge)) return false;
 					$.fn.fullpage.moveTo('page3', 0)
 				})
 			}
