@@ -1,3 +1,4 @@
+
 window.onload = function() {
 
 	var getYourAgeBtn = $('.getYourAgeBtn'),
@@ -5,10 +6,14 @@ window.onload = function() {
 		getYourAge = $('.getYourAge').find('input'),
 		getParentAge = $('.getParentAge').find('input'),
 		loadPage = $('.shadow'),
-		loadPage = $('.loadPage')
+		loadPage2 = $('.loadPage')
 
-	loadPage.fadeOut()
-
+	loadPage2.fadeOut()
+	$('body').css({
+		width:'auto',
+		height:'auto',
+		overflow:'auto'
+	})
 	$('#yourLeft').fullpage({
 		scrollingSpeed: 800,
 		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9'],

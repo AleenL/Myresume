@@ -21,6 +21,9 @@
 				color: #333;
 				font-size: 12px;
 				font-family: "微软雅黑", "Arial Narrow";
+				width:100%;
+				height:100vh;
+				overflow: hidden;
 			}
 			
 			a {
