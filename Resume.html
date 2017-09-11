@@ -196,7 +196,9 @@
 					background-position: 0 0;
 				}
 			}
-			
+			.my_technical{
+				margin-top: 30px;
+			}
 			.slide_right_content .title {
 				margin: 20px 0 10px 0;
 				border-radius: 5px;
@@ -212,8 +214,9 @@
 			.slide_right_content .my_projects ul li,
 			.slide_right_content .my_little_projects ul li {
 				width: 100%;
-				height: 120px;
+				height: 150px;
 				margin-bottom: 10px;
+				font-size: 0.9rem
 			}
 			
 			.slide_right_content .my_projects ul li .project_message,
@@ -315,11 +318,11 @@
 							<li><span>工作经历：</span>一年以内</li>
 							<li><span>学历：</span>本科</li>
 							<li><span>生日：</span>1991年2月17日</li>
-							<li><span>求职城市：</span>深圳 重庆</li>
+							<li><span>求职城市：</span>重庆</li>
 							<li><span>QQ：</span>784757555</li>
 							<li><span>电话：</span>185 8036 0217</li>
 							<li><span>邮箱：</span>
-								<a href="mailto:aleenli1992@gmail.com" style='font-size:13px'>aleenli1992@gmail.com</a>
+								<a href="784757555@qq.com" style='font-size:13px'>784757555@qq.com</a>
 							</li>
 							<li><span>博客：</span>
 								<a href="https://aleenl.github.io">aleenl.github.io</a>
@@ -391,12 +394,12 @@
 						<h3 class='title'>掌握技术</h3>
 						<ul>
 							<li>静态页面: 100%还原设计稿，像素级页面制作能力，熟悉瀑布流，懒加载等布局模式</li>
-							<li>动态页面: 熟悉HTTP、AJAX、JSONP、mock数据等技术，了解前后端分离开发模式</li>
-							<li>移动页面: 熟悉CSS3、Flex、响应式页面、MUI、jqueryMoblie等移动开发工具，熟悉webpack打包工具</li>
-							<li>前端框架: 了解Vue.js、React 基本原理，能使用前端框架开发富交互式应用</li>
+							<li>动态页面: 熟悉HTTP、AJAX、JSONP数据等技术，了解前后端分离开发模式</li>
+							<li>移动页面: 熟悉CSS3、Flex、响应式页面、MUI等移动开发工具，熟悉webpack打包工具</li>
+							<li>前端框架: 熟悉React原理，能使用前端框架开发富交互式应用</li>
 							<li>工作能力: 乐于学习新兴技术，不怕吃苦，能及时完成任务</li>
 							<li>开发工具: 熟练使用Git、Emmet、Markdown、SVN等前端开发工具</li>
-							<li>其他技能:了解合作开发模式，了解IDEA开发流程</li>
+							<li>其他技能:	 了解ES6相关知识，了解IDEA开发流程</li>
 						</ul>
 					</div>
 					<div class='my_projects'>
@@ -405,7 +408,7 @@
 							<img src="http://upload-images.jianshu.io/upload_images/3257837-e2d5be18cd05486c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
 							<div>
 								<h3><a href="https://www.xiaojs.cn">小教室——直播平台</a></h3>
-								<p>工作年限：2017.03-至今</p>
+								<p>工作年限：2017.01-至今</p>
 							</div>
 
 						</div>
@@ -417,18 +420,34 @@
 						<h3 class='title'>项目经历</h3>
 						<ul>
 							<li>
-								<img src="http://upload-images.jianshu.io/upload_images/3257837-4f08826149215bbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
+								<img src="http://upload-images.jianshu.io/upload_images/3257837-9ebd67815ed29ff9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
 								<div class='project_message'>
-									<h3><a href="https://aleenl.github.io/mobilefm/music.html">手机音乐播放器</a></h3>
-									<p>简介：依赖百度音乐库资源，实现播放／暂停、下一曲、上一曲、播放进度、实时歌词显示</p>
-									<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span><span class='use_style ajax_style'>Ajax</span></p>
+									<h3><a href="https://github.com/AleenL/WeatherApp">手机天气APP</a></h3>
+									<p>简介：使用React全家桶进行模块化的开发，create-react-app搭建的脚手架，Redux管理全局数据，axios进行跨域请求知心天气的API，webpack进行打包封装，使用Less进行CSS的预编译，实现的功能有获取本地天气，查找城市，获取查找城市天气，组件设置，满足了一个天气应用最基本的功能。</p>
+									<p>主要运用技术：<span class='use_style html_style'>webpack</span><span class='use_style react_style'>React</span><span class='use_style jq_style'>Redux</span><span class='use_style css_style'>Less</span></p>
+								</div>
+							</li>							
+							<li>
+								<img src="http://upload-images.jianshu.io/upload_images/3257837-15e3ca448ce7bdc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
+								<div class='project_message'>
+									<h3><a href="https://aleenl.github.io/NewReactMusic/build/index.html">手机音乐播放器</a></h3>
+									<p>简介：依赖与百度音乐库提供的API使用Ajax获取音乐地址，音乐种类以及歌词信息，使用React进行组件化开发应用，实现了播放，暂停，下一曲，上一曲，音量控制，歌词同步显示，记录收藏曲目等各项功能</p>
+									<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style react_style'>React</span><span class='use_style jq_style'>jQuery</span><span class='use_style ajax_style'>ES6</span></p>
 								</div>
 							</li>
+								<li>
+									<img src="http://upload-images.jianshu.io/upload_images/3257837-c6e3063ea369d8d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
+									<div class='project_message'>
+										<h3><a href="https://aleenl.github.io/new-carousel/newCarouel.html">轮播项目</a></h3>
+										<p>简介：一个的轮播项目，实现的下一页和上一页的功能，同时提供缩略图，加载进度等</p>
+										<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
+									</div>
+								</li>						
 							<li>
 								<img src='http://upload-images.jianshu.io/upload_images/3257837-1c2e735a3261e10b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' alt="">
 								<div class='project_message'>
 									<h3><a href="https://aleenl.github.io/Vuedemo/todoList.html">Vue TodoList</a></h3>
-									<p>简介：创建一个基于Vue框架下的代办事项，实现了和用户的富交互，实现了获取本地天气状况和选择背景色功能，利用leanCloud创建了注册和登陆功能</p>
+									<p>简介：创建一个基于Vue框架下的代办事项，实现了未完成、已完成、删除等功能，增加了获取本地天气状况和选择背景色功能，利用leanCloud创建了注册和登陆功能</p>
 									<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>webpack</span><span class='use_style jq_style'>jQuery</span><span class='use_style vue_style'>Vue</span></p>
 								</div>
 							</li>
@@ -440,38 +459,10 @@
 									<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
 								</div>
 							</li>
-							<li>
-								<img src="http://upload-images.jianshu.io/upload_images/3257837-7914d39660a851f5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
-								<div class='project_message'>
-									<h3><a href="https://aleenl.github.io/myresumer/dist">Vue 简历编辑器</a></h3>
-									<p>基于Vue框架下实现的一个简历编辑器，对用户所输入的信息可以实时的显示在页面上，结合leanCloud可以保存用户输入的信息，也同时提供了注册和登陆功能。</p>
-									<p>主要运用技术：<span class='use_style vue_style'>Vue</span><span class='use_style html_style'>HTML</span><span class='use_style css_style'>webpack</span><span class='use_style jq_style'>jQuery</span></p>
-								</div>
-							</li>
+							
 						</ul>
 					</div>
-					<div class='my_little_projects'>
-						<h3 class='title'>其他小项目</h3>
-						<ul>
-							<li>
-								<img src='http://upload-images.jianshu.io/upload_images/3257837-1c2e735a3261e10b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240' alt="">
-								<div class='project_message'>
-									<h3><a href="https://aleenl.github.io/Vuedemo/todoList.html">Vue TodoList</a></h3>
-									<p>简介：创建一个基于Vue框架下的代办事项，实现了和用户的富交互，利用leanCloud创建了注册和登陆功能</p>
-									<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span><span class='use_style vue_style'>Vue</span></p>
-								</div>
-							</li>
-							<ul>
-								<li>
-									<img src="http://upload-images.jianshu.io/upload_images/3257837-c6e3063ea369d8d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
-									<div class='project_message'>
-										<h3><a href="https://aleenl.github.io/new-carousel/newCarouel.html">小轮播项目</a></h3>
-										<p>简介：一个小型的轮播项目，实现的下一页和上一页的功能，同时提供缩略图，加载进度等</p>
-										<p>主要运用技术：<span class='use_style html_style'>HTML</span><span class='use_style css_style'>CSS</span><span class='use_style jq_style'>jQuery</span></p>
-									</div>
-								</li>
-							</ul>
-					</div>
+					
 				</div>
 			</div>
 		</div>

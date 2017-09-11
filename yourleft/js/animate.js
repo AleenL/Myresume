@@ -40,6 +40,7 @@
 					if(index == 2){
 						getYourAgeBtn.on('click',function(){
 							judgeNumber(getYourAge)
+							if(!judgeNumber(getYourAge)) return false;
 							$.fn.fullpage.moveTo('page3',0)
 						})
 					}
