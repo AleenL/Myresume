@@ -21,8 +21,13 @@
 				color: #333;
 				font-size: 12px;
 				font-family: "微软雅黑", "Arial Narrow";
+				
 			}
-			
+			.over{
+				width:100%;
+				height:100vh;
+				overflow: hidden;
+			}
 			a {
 				color: #2d374b;
 				text-decoration: none
@@ -106,10 +111,10 @@
 				box-shadow: 0 0 30px #888;
 			}
 			
-			.interBtn.yourLife{
-				margin-top: 6rem
+			.interBtn.yourLife {
+				margin-top: 3rem
 			}
-
+			
 			.section {
 				position: relative;
 			}
@@ -186,9 +191,16 @@
 				background: rgb(61, 79, 178);
 			}
 			
-
 			.section:nth-child(n+4) {
 				background: #ddd;
+			}
+			
+			.section.section9 {
+				background-image: url(../img/yourCity.png);
+				background-color: rgb(38, 18, 42);
+				background-repeat: no-repeat;
+				background-size: 60%;
+				background-position: center
 			}
 			
 			.section:nth-child(n+4) .lifeBox {
@@ -196,6 +208,14 @@
 				width: 90%;
 				margin: 0 auto;
 				box-shadow: 5px 0px 20px #555;
+			}
+			
+			.section:nth-child(n+4) h4 {
+				font-size: 1.3rem;
+				padding: 0.4rem 0;
+				font-weight: 200;
+				text-align: center;
+				color: #007AFF
 			}
 			
 			.section:nth-child(n+4) table {
@@ -206,60 +226,106 @@
 			.section:nth-child(n+4) table tr td {
 				border: 2px solid #ddd;
 				background: #fff;
-
 			}
 			
 			.section:nth-child(n+4) p {
 				color: #223;
 				font-size: 0.95rem;
 				text-align: center;
-				line-height: 2rem;
+				line-height: 1.5rem;
 				padding: 0;
 			}
 			
 			.section:nth-child(n+4) p:first-child {
-				padding-top: 1rem;
+				padding-top: 0.2rem;
 			}
 			
 			.section:nth-child(n+4) p:last-of-type {
-				padding-bottom: 1rem;
+				padding-bottom: 0.5rem;
 			}
 			
 			.section:nth-child(n+4) a {
 				background: rgba(63, 79, 178, .8);
 			}
+			
 			.section3 .shadow {
 				position: absolute;
 				background: rgb(63, 79, 178);
 				top: 0rem;
 				width: 100%;
 				height: 100vh;
-				box-shadow:-2px 2px 10px 0 rgba(0,0,0,0.5),
-				2px -2px 10px 0 rgba(255,255,255,0.5);
+				box-shadow: -2px 2px 10px 0 rgba(0, 0, 0, 0.5), 2px -2px 10px 0 rgba(255, 255, 255, 0.5);
 				display: none;
 			}
-			.section3 .shadow p{
+			
+			.section3 .shadow p {
 				color: #fff;
 				font-size: 1.5rem;
 				text-align: center;
 				margin-top: 30vh
 			}
+			
 			.loader {
 				margin: 20vh auto;
-			    background: -webkit-linear-gradient(left, skyblue 50%, #fafafa 50%); /* Foreground color, Background colour */
-			    border-radius: 100%;
-			    height: 100px; /* Height and width */
-			    width: 100px; /* Height and width */
-			    animation: time 8s steps(500, start) infinite;
-			}
-			.mask {
-			    border-radius: 100% 0 0 100% / 50% 0 0 50%;
-			    height: 100%;
-			    left: 0;
-			    position: absolute;
-			    top: 0;
-			    width: 50%;
-			    animation: mask 2s steps(250, start) infinite;
-			    transform-origin: 100% 50%;
+				background: -webkit-linear-gradient(left, skyblue 50%, #fafafa 50%);
+				/* Foreground color, Background colour */
+				border-radius: 100%;
+				height: 100px;
+				/* Height and width */
+				width: 100px;
+				/* Height and width */
+				animation: time 8s steps(500, start) infinite;
 			}
 			
+			.mask {
+				border-radius: 100% 0 0 100% / 50% 0 0 50%;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 50%;
+				animation: mask 2s steps(250, start) infinite;
+				transform-origin: 100% 50%;
+			}
+			
+			.section.section9 p:first-child {
+				padding-top: 2rem;
+			}
+			
+			.section.section9 p {
+				color: #fff;
+				font-size: 1.2rem;
+				line-height: 2rem;
+			}
+			
+			.section.section1 .loadPage{
+				width:100%;
+				height:100vh;
+				position: absolute;
+				top:0;
+				left:0;
+				z-index: 99;
+				background-image: url(../img/yourname.png);
+				background-color: rgb(38, 18, 42);
+				background-repeat: no-repeat;
+				background-size: 60%;
+				background-position: center
+			}
+			.section.section1 h4{
+				font-size: 1.2rem;
+				text-align: center;
+				padding:2rem 0;
+				color: #fff
+			}
+			.section.section1 .spinner {
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				left:50%;
+				top:80%;
+				margin-left:-15px;
+				margin-top: -30px;
+				background-color: #ccc;
+				-webkit-animation: rotateplane 1.2s infinite ease-in-out;
+				animation: rotateplane 1.2s infinite ease-in-out;
+			}
